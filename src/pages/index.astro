@@ -1,24 +1,25 @@
 ---
 import LayoutDefault from '~/layouts/LayoutDefault.astro'
-import Post from '~/components/Post.astro'
-import { getPosts, getPostDescription } from '~/utils'
-import Pagination from '~/components/Pagination.astro'
-
-const posts = (await getPosts()).slice(0, 5)
-
-const { translate: t } = Astro.locals
-
 ---
 
 <LayoutDefault>
-  <section contain-layout un-flex="~ col gap-7.5">
-    {
-      posts.map((post) => (
-        <Post post={post}>
-          <p class="line-clamp-4">{getPostDescription(post)}</p>
-        </Post>
-      ))
-    }
-    <Pagination showLeft={false} showPageCount={false} rightTitle={t('all_posts')} rightUrl={'posts/page/1'} />
-  </section>
+  <link rel="stylesheet" type="text/css" href="/css/1.css">
+  <div class="container">
+    <h1>Hi! 👋</h1>
+    <h2>I'm <span class="name">Weixin Zheng</span></h2>
+    <p class="description">A <span class="developer">💻 Developer</span> and <span class="gamer">🎮 Gamer</span></p>
+    <div class="buttons">
+      <a href="/posts/page/1" class="btn blog-btn">My Blog</a>
+      <a href="/about" class="btn about-btn">About Me</a>
+    </div>
+    <div class="socials">
+        <a href="https://app.weexy.cn" class="social-link">Apps</a>
+        <a href="mailto:zhengweixin0101@outlook.com" class="social-link">Email</a>
+        <a href="https://github.com/Weexyy" class="social-link">Github</a>
+    </div>
+    <div class="profile-pic">
+      <img src="https://s21.ax1x.com/2024/05/31/pk8BMSU.jpg" alt="zhengweixin">
+    </div>
+</div>
 </LayoutDefault>
+
