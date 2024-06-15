@@ -48,6 +48,8 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** your category name mapping, which the `path` will be shown in the url */
   category_map: [
     { name: "其他", path: "others" },
+    { name: "分享", path: "share" },
+    { name: "经验", path: "experience" },
   ],
   /** your comment provider */
   comments: {
