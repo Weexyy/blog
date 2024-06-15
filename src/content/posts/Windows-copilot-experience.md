@@ -2,7 +2,7 @@
 title: Windows Copilot 上手体验
 description: 本文是我对 Windows Copilot 的使用体验。
 pubDate: 2023-11-21
-categories: [分享]
+categories: [点评]
 ---
 
 前段时间，微软发布了 Windows ，因为那时候要 Insider Preview 版本才能用，所以一直没更新。

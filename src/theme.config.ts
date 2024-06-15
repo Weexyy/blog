@@ -50,6 +50,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
     { name: "其他", path: "others" },
     { name: "分享", path: "share" },
     { name: "经验", path: "experience" },
+    { name: "点评", path: "review" },
   ],
   /** your comment provider */
   comments: {
