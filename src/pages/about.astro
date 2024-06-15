@@ -1,7 +1,78 @@
 ---
-import LayoutDefault from "~/layouts/LayoutDefault.astro"
+import LayoutDefault from '../layouts/LayoutDefault.astro';
 ---
 
 <LayoutDefault>
-  
+  <link rel="stylesheet" type="text/css" href="/src/styles/about.css">
+  <div class="about">
+    <img src="https://s21.ax1x.com/2024/05/31/pk8BMSU.jpg" alt="我的头像" class="profile-picture" />
+    <h2>关于</h2>
+  </div>
+  <div class="about-section">
+    <div class="about-column">
+      <div class="my-name">
+        <p>你好，</p>
+        <h2>我叫 郑炜鑫</h2>
+        <p>很高兴认识你！</p>
+      </div>
+      <div class="about-me">
+        <h2>个人简介</h2>
+        <p>出生于2010年1月1日，</br>目前是一名八年级学生，</br>就读于江山市城东实验学校。</p>
+        <p>喜欢探索和学习新技术，</br>看到什么没玩过的东西就像试试。</p>
+        <p>一个偶然的机遇爱上了代码，</br>没啥很好的技术,就会点HTML和Python。</br>这些都是自己钻研的，没学过。</p>
+        <p>后来又折腾起了手机，加入了机圈,</br>浅会简单的修改系统，反编译APK。</p>
+      </div>
+      <div class="about-connect">
+        <h2>联系方式</h2>
+        <p>如果你有任何问题，欢迎通过下面的方式联系我：</p>
+        <ul>
+            <li>邮箱: <a href="mailto:zhengweixin0101@outlook.com">zhengweixin0101@outlook.com</a></li>
+            <li>QQ: <a href="http://wpa.qq.com/msgrd?v=3&uin=2422915421&site=qq&menu=yes">2422915421</a></li>
+            <li>Telegram: <a href="https://telegram.me/zhengweixin0101">zhengweixin0101</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-column">
+      <div class="about-Pursue">
+        <div class="about-Pursue-zhuiqiu">追求</div>
+        <h2>源于<br>热爱而去 感受</h2>
+        <span id="about-Pursue-dynamic-span">程序</span>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const span = document.getElementById('about-Pursue-dynamic-span') as HTMLSpanElement;
+                if (span) {
+                    const contents = [
+                        { text: '程序', color: 'red' },
+                        { text: '学习', color: 'green' },
+                        { text: '生活', color: 'blue' },
+                        { text: '体验', color: 'orange' }
+                    ];
+                    let index = 0;
+    
+                    function switchContent() {
+                        index = (index + 1) % contents.length;
+                        span.textContent = contents[index].text;
+                        span.style.color = contents[index].color;
+                    }
+    
+                    setInterval(switchContent, 2000); // 每2秒切换一次内容
+                } else {
+                    console.error("Element with ID 'dynamic-span' not found.");
+                }
+            });
+        </script>
+      </div>
+      <div class="about-Specialties">
+        <p>特长</p>
+        <h2>脑回路清奇的 酸菜鱼</h2>
+        <h2>二次元指数 MAX</h2>
+      </div>
+      <div class="about-blog">
+        <h2>关于博客</h2>
+        <p>我的第一个博客建于2022年，疫情在家无聊就打算建个博客。一开始在服务器部署wordpress博客，后来续不起服务器，又迁移到了typecho、hexo等框架。</p>
+        <p>博客现在使用的是astro，计划以后不换了，部分代码及页面样式参考了安知鱼和小孙同学的博客，当然也有参考其他人的。</p>
+        <p>我会在这里分享有关编程、玩机和科技的问题和看法，相信你可以在里这找到对你有用的知识。</p>
+      </div>
+    </div>
+  </div>
 </LayoutDefault>

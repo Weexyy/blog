@@ -1,0 +1,138 @@
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .about h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .about-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  .my-name h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .my-name p {
+    font-size: 1.0rem;
+    color: #cdc7ff;
+  }
+  .my-name {
+    background: linear-gradient(to right, #3c00ff, #3880fb);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    padding: 20px;
+    overflow: hidden;
+  }
+  .about-Pursue-zhuiqiu {
+    color: #333;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  .about-Pursue h2{
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  #about-Pursue-dynamic-span {
+    color: #0026ff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer; /* 鼠标指针样式为手型 */
+    transition: color 1s ease; /* 添加颜色变化的过渡效果 */
+    position: relative; /* 让文字动画可以相对于自身元素进行定位 */
+    display: inline-block; /* 行内元素转为块级元素，以便应用动画 */
+  }
+  .about-me {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    padding: 20px;
+    overflow: hidden;
+    border-left: 3px solid #2e405b;
+  }
+  .about-me h2 , .about-blog h2 , .about-connect h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .about-me p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666;
+  }
+  .about-blog , .about-connect, .about-Pursue {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    padding: 20px;
+    overflow: hidden;
+
+  }
+  .about-blog p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666;
+  }
+  .about-connect h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .about-connect p {
+    margin-bottom: 20px;
+    font-size: 1.0rem;
+    line-height: 1.2;
+    color: #666;
+  }
+  .about-connect ul {
+    color: #666;
+    text-align: left;
+  }
+  .about-connect ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .about-connect ul li {
+    margin: 8px 0;
+  }
+  .about-Specialties {
+    background: linear-gradient(to right, #ff27e6, #ff507d);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    padding: 20px;
+    overflow: hidden;
+  }
+  .about-Specialties h2 {
+    color: #ffffff;
+    font-size: 2.0rem;
+    font-weight: bold;
+  }
+  .about-Specialties p {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #ffacee;
+  }

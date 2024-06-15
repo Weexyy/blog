@@ -1,38 +1,30 @@
 export const THEME_CONFIG: App.Locals['config'] = {
   /** blog title */
-  title: "活版印字",
+  title: "小郑同学",
   /** your name */
-  author: "Typography",
+  author: "Weixin Zheng",
   /** website description */
-  desc: "Rediscory the beauty of typography",
+  desc: "一条有远大梦想的咸鱼...",
   /** your deployed domain */
-  website: "https://astro-theme-typography.vercel.app/",
+  website: "https://weexy.cn/",
   /** your locale */
-  locale: "en-us",
+  locale: "zh-cn",
   /** theme style */
   themeStyle: "light",
   /** your socials */
   socials: [
     {
       name: "github",
-      href: "https://github.com/moeyua/astro-theme-typography",
+      href: "https://github.com/weexyy",
     },
     {
       name: "rss",
       href: "/atom.xml",
-    },
-    {
-      name: "twitter",
-      href: "https://github.com/moeyua/astro-theme-typography",
-    },
-    {
-      name: "mastodon",
-      href: "https://github.com/moeyua/astro-theme-typography",
     }
   ],
   /** your header info */
   header: {
-    twitter: "@moeyua13",
+    twitter: "@zhengweixin0101",      //推特卡片用户名
   },
   /** your navigation links */
   navs: [
@@ -55,14 +47,14 @@ export const THEME_CONFIG: App.Locals['config'] = {
   ],
   /** your category name mapping, which the `path` will be shown in the url */
   category_map: [
-    { name: "胡适", path: "hu-shi" },
+    { name: "其他", path: "others" },
   ],
   /** your comment provider */
   comments: {
-    disqus: {
-      // please change this to your disqus shortname
-      shortname: "typography-astro",
-    },
+    // disqus: {
+       // please change this to your disqus shortname
+    //   shortname: "typography-astro",
+    // },
     // giscus: {
     //   repo: 'moeyua/astro-theme-typography',
     //   repoId: 'R_kgDOKy9HOQ',
@@ -77,9 +69,9 @@ export const THEME_CONFIG: App.Locals['config'] = {
     //   lang: 'zh-CN',
     //   loading: 'lazy',
     // },
-    // twikoo: {
-    //   envId: "https://twikoo-tau-flame.vercel.app",
-    // }
+     twikoo: {
+       envId: "https://twikoo.api.weexy.cn/.netlify/functions/twikoo",
+     }
   }
 }
 
