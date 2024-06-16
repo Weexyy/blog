@@ -1,11 +1,11 @@
-header {
-    visibility: hidden; /* 隐藏侧边栏标题 */
+[data-astro-source-file="E:/code/astro-blog/src/layouts/LayoutDefault.astro"][data-astro-source-loc="65:141"] {
+    display: none;
 }
 
 
 .profile-pic {
     float: right;
-    margin-left: 500px;
+    margin-left: 800px;
     margin-top: -300px;
     border-radius: 50%;
     overflow: hidden;
