@@ -13,10 +13,28 @@
     height: 300px;
     box-shadow: 0 0 5px #2e405b;
 }
+@media (max-width: 1024px) {
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-top: -300px;
+    }
+  }
+  @media (max-width: 600px) {
+    .profile-pic {
+        display: none;
+    }
+  }
+  
 h2 {
     margin-top: 70px;
     font-size: 3rem;
 }
+@media (max-width: 425px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+  }
 h3 {
     font-size: 3.5rem;
     margin-bottom: 15px;
@@ -29,10 +47,31 @@ h3 {
     -webkit-text-fill-color: transparent; 
     font-weight: bold;
 }
+@media (max-width: 768px) {
+    h3 {
+        font-size: 2.5rem;
+    }
+  }
+@media (max-width: 425px) {
+    h3 {
+        font-size: 2.rem;
+    }
+  }
+@media (max-width: 425px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+  }
+  
 .description {
     margin-top: 25px;
     font-size: 1.4rem;
 }
+@media (max-width: 425px) {
+    .description {
+        font-size: 1rem;
+    }
+  }
 .developer , .gamer {
     background: linear-gradient(to right, #00ffaa, #00fbff);
     font-weight: bold;
@@ -49,6 +88,12 @@ h3 {
     font-size: 1em;
     font-weight: bold; /* 加粗字体 */
 }
+@media (max-width: 425px) {
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+  }
 .blog-btn {
     color: #000000;
     text-decoration: none;
@@ -68,14 +113,18 @@ h3 {
 .social-link {
     margin: 0 10px;
     color: #2e405b; 
-    font-size: 1em;
+    font-size: 1rem;
     text-decoration: none;
     display: flex;
     align-items: center;
     font-weight: bold;
-    padding: 8px 12px;
     border-radius: 5px;
 }
+@media (max-width: 425px) {
+    .social-link {
+        font-size: 0.8rem;
+    }
+  }
 .social-link .icon {
     margin-right: 3px; /* 调整图标与文本之间的间距 */
 }
