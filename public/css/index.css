@@ -6,8 +6,8 @@
     overflow: hidden;
     width: 300px;
     height: 300px;
+    box-shadow: 0 0 5px #2e405b;
 }
-
 h2 {
     margin-top: 70px;
     font-size: 3rem;
@@ -22,6 +22,7 @@ h3 {
     background-clip: text;
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
+    font-weight: bold;
 }
 .description {
     margin-top: 25px;
@@ -39,20 +40,25 @@ h3 {
     font-size: 1em;
 }
 .blog-btn {
-    background: linear-gradient(to right, #73ceff, #3880fb);
-    color: #fff;
+    color: #000000;
     text-decoration: none;
+    box-shadow: 0px 0 30px rgb(0,153,184);
+    border: 2px solid; 
 }
 .about-btn {
-    background: linear-gradient(to right, #3880fb, #73ceff);
-    color: #fff;
+    color: #000000;
     text-decoration: none;
+    border: 2px solid; 
 }
 .socials {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .social-link {
     margin: 0 10px;
     color: #2e405b; 
     font-size: 1em;
+    text-decoration: none;
 }
+
+
+
