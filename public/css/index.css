@@ -1,9 +1,6 @@
-.text-center {
+.text-center , .max-lg\:hidden {  /*隐藏侧栏*/
     display: none;
 }
-    .max-lg\:hidden {
-        display: none;
-    }
 
 
 .profile-pic {
