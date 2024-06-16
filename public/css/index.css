@@ -6,7 +6,7 @@
 .profile-pic {
     float: right;
     margin-left: 800px;
-    margin-top: -300px;
+    margin-top: -350px;
     border-radius: 50%;
     overflow: hidden;
     width: 300px;
@@ -32,6 +32,10 @@ h3 {
 .description {
     margin-top: 25px;
     font-size: 1.4rem;
+}
+.developer , .gamer {
+    background: linear-gradient(to right, #00ffaa, #00fbff);
+    font-weight: bold;
 }
 .buttons {
     margin-top: 50px;
@@ -75,6 +79,3 @@ h3 {
 .social-link .icon {
     margin-right: 3px; /* 调整图标与文本之间的间距 */
 }
-
-
-
