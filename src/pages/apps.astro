@@ -1,0 +1,50 @@
+---
+import LayoutDefault from '~/layouts/LayoutDefault.astro'
+---
+
+<LayoutDefault>
+    <link rel="stylesheet" type="text/css" href="/css/apps.css">
+    <div class="container">
+        <div class="apps">
+            <h2>Apps</h2>
+        </div>
+        <div class="projects" id="projects">
+        </div>
+    </div>
+    <script type="module" is:inline>
+        const projects = [
+            { url: 'https://music.weexy.cn/', title: 'Weexy Music', description: '第三方网易云播放器' },
+            { url: 'https://calculator.weexy.cn/', title: '计算器', description: '一个多功能的在线计算器' },
+            { url: 'https://reader.weexy.cn/', title: 'Reader', description: '专为电脑端设计的在线阅读器' },
+            { url: 'https://draw.weexy.cn/', title: '画板', description: '一个功能强大的在线白板' },
+            { url: 'https://chat.weexy.cn/', title: 'NextChat', description: '一个需要填写key才可以用的AI' },
+            { url: 'https://umami.weexy.cn/', title: 'Umami', description: '自建网站统计' }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectsContainer = document.getElementById('projects');
+
+            projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+
+                const projectTitle = document.createElement('h2');
+                projectTitle.textContent = project.title;
+
+                const projectDescription = document.createElement('p');
+                projectDescription.textContent = project.description;
+
+                const projectLink = document.createElement('a');
+                projectLink.href = project.url;
+                projectLink.textContent = '查看项目';
+                projectLink.target = '_blank';
+
+                projectCard.appendChild(projectTitle);
+                projectCard.appendChild(projectDescription);
+                projectCard.appendChild(projectLink);
+
+                projectsContainer.appendChild(projectCard);
+            });
+        });
+    </script>
+</LayoutDefault>
