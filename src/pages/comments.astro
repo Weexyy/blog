@@ -1,0 +1,55 @@
+---
+import LayoutDefault from '~/layouts/LayoutDefault.astro'
+---
+
+<LayoutDefault>
+    <link rel="stylesheet" href="/css/comments.css">
+
+    <div id="maincontent">
+        <div id="form-wrap">
+            <img class="no-lightbox entered loaded" id="beforeimg"
+                 src="https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png"
+                 onerror="this.onerror=null; this.src='https://bu.dusays.com/2023/03/03/6401a79030db5.png';"
+                 alt="Before Image">
+            
+            <div id="envelope">
+                <form>
+                    <div class="formmain">
+                        <img class="headerimg no-lightbox entered loaded"
+                             src="https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg"
+                             onerror="this.onerror=null; this.src='https://bu.dusays.com/2023/03/03/6401a79030db5.png';"
+                             alt="Header Image">
+                        
+                        <div class="comments-main">
+                            <h3 class="title3" style="color:$theme-color; text-align:center;">
+                                来自 郑炜鑫 的留言:
+                            </h3>
+                            <div class="comments" style="text-align:center; border:#ddd 1px solid; background-color:#eee; margin:15px 0; padding:20px;">
+                                <div>有什么想问的？</div>
+                                <div>有什么想说的？</div>
+                                <div>有什么想吐槽的？</div>
+                                <div>哪怕是有什么想吃的，都可以告诉我哦~</div>
+                            </div>
+                            
+                            <div class="bottomcontent" style="text-align:center; margin-top:40px;">
+                                <img class="bottomimg no-lightbox entered loaded"
+                                     src="https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png"
+                                     onerror="this.onerror=null; this.src='https://bu.dusays.com/2023/03/03/6401a79030db5.png';"
+                                     alt="Line Image" style="width:100%; display:block; margin:5px auto;">
+                            </div>
+                            
+                            <p class="bottomhr" style="font-size:12px; text-align:center; color:#999;">
+                                自动书记人偶竭诚为您服务！
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <img class="no-lightbox entered loaded" id="afterimg"
+                 src="https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png"
+                 onerror="this.onerror=null; this.src='https://bu.dusays.com/2023/03/03/6401a79030db5.png';"
+                 alt="After Image">
+        </div>
+    </div>
+    </LayoutDefault>
