@@ -74,7 +74,11 @@
 
 #maincontent {
   width: 530px;
-  margin: 20px 150px 0;
+  margin: 20px auto 0;
+}
+@media (max-width: 1024px) { #maincontent { 
+  margin-left: 20px ; 
+  } 
 }
 
 .headerimg {
