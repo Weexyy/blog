@@ -81,4 +81,23 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
             </div>
         </form>
     </div>
-    </LayoutDefault>
+
+  <!-- 评论区 -->
+  <div id="twikoo"></div>
+
+  <!-- 引入Twikoo的JavaScript SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.8/dist/twikoo.all.min.js"></script>
+
+  <!-- 初始化Twikoo -->
+  <script>
+    // 确保Twikoo在页面加载后初始化
+    window.addEventListener('load', function () {
+      // 使用类型断言告诉TypeScript twikoo存在于window对象上
+      (window as any).twikoo.init({
+        envId: 'https://twikoo.api.weexy.cn/.netlify/functions/twikoo', // 替换为您的环境ID
+        el: '#twikoo'
+      });
+    });
+  </script>
+  
+</LayoutDefault>
