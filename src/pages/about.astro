@@ -23,27 +23,33 @@ import LayoutDefault from '../layouts/LayoutDefault.astro';
         <p>后来又折腾起了手机，加入了<span class="about-me-color">机圈</span>,</br>浅会简单的修改系统，反编译APK。</p>
       </div>
 <!-- 文字随机颜色 -->
-      <script>
-        function getRandomColor(): string {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
+<script>
+  const usedColors = new Set<string>();
 
-        function setRandomColors(): void {
-            const elements = document.querySelectorAll('.about-me-color');  //需要随机颜色的文字
-            elements.forEach(element => {
-                const htmlElement = element as HTMLElement; // 类型断言
-                const randomColor = getRandomColor();
-                htmlElement.style.color = randomColor;
-            });
-        }
+  function getRandomColor(): string {
+      const letters = '0123456789ABCDEF';
+      let color;
+      do {
+          color = '#';
+          for (let i = 0; i < 6; i++) {
+              color += letters[Math.floor(Math.random() * 16)];
+          }
+      } while (usedColors.has(color)); // 检查颜色是否已被使用
+      usedColors.add(color); // 将新颜色添加到集合中
+      return color;
+  }
 
-        document.addEventListener('DOMContentLoaded', setRandomColors);
-    </script>
+  function setRandomColors(): void {
+      const elements = document.querySelectorAll('.about-me-color');
+      elements.forEach(element => {
+          const htmlElement = element as HTMLElement;
+          const randomColor = getRandomColor();
+          htmlElement.style.color = randomColor;
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', setRandomColors);
+</script>
 
       <div class="about-connect">
         <h2>联系方式</h2>
