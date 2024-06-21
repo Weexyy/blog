@@ -12,6 +12,7 @@
     font-size: 1.8rem;
     margin-bottom: 15px;
     text-align: center;
+    font-weight: bold;
   }
   .about-section {
     display: flex;
@@ -80,6 +81,9 @@
     font-size: 1.1rem;
     line-height: 1.5;
     color: #666;
+  }
+  .about-me-color {
+    font-weight: bold;
   }
   .about-blog , .about-connect, .about-Pursue {
     background-color: #FFFFFF;

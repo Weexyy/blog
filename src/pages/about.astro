@@ -17,11 +17,34 @@ import LayoutDefault from '../layouts/LayoutDefault.astro';
       </div>
       <div class="about-me">
         <h2>个人简介</h2>
-        <p>出生于2010年1月1日，</br>目前是一名八年级学生，</br>就读于江山市城东实验学校。</p>
-        <p>喜欢探索和学习新技术，</br>看到什么没玩过的东西就像试试。</p>
-        <p>一个偶然的机遇爱上了代码，</br>没啥很好的技术,就会点HTML和Python。</br>这些都是自己钻研的，没学过。</p>
-        <p>后来又折腾起了手机，加入了机圈,</br>浅会简单的修改系统，反编译APK。</p>
+        <p>出生于<span class="about-me-color">2010年1月1日</span>，</br>目前是一名<span class="about-me-color">八年级学生</span>，</br>就读于<span class="about-me-color">江山市城东实验学校</span>。</p>
+        <p>喜欢探索和学习<span class="about-me-color">新技术</span>，</br>看到什么没玩过的东西就像试试。</p>
+        <p>一个偶然的机遇爱上了<span class="about-me-color">代码</span>，</br>没啥很好的技术,就会点<span class="about-me-color">HTML</span>和<span class="about-me-color">Python</span>。</br>这些都是自己钻研的，没学过。</p>
+        <p>后来又折腾起了手机，加入了<span class="about-me-color">机圈</span>,</br>浅会简单的修改系统，反编译APK。</p>
       </div>
+<!-- 文字随机颜色 -->
+      <script>
+        function getRandomColor(): string {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function setRandomColors(): void {
+            const elements = document.querySelectorAll('.about-me-color');  //需要随机颜色的文字
+            elements.forEach(element => {
+                const htmlElement = element as HTMLElement; // 类型断言
+                const randomColor = getRandomColor();
+                htmlElement.style.color = randomColor;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', setRandomColors);
+    </script>
+
       <div class="about-connect">
         <h2>联系方式</h2>
         <p>如果你有任何问题，欢迎通过下面的方式联系我：</p>
