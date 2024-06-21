@@ -28,7 +28,6 @@
     color: #ffffff;
     font-size: 1.8rem;
     margin-bottom: 5px;
-    font-weight: bold;
   }
   .my-name p {
     font-size: 1.0rem;
@@ -41,6 +40,7 @@
     margin: 20px 0;
     padding: 20px;
     overflow: hidden;
+    font-weight: bold;
   }
   .about-Pursue-zhuiqiu {
     color: #333;
