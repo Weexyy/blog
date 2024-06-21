@@ -55,7 +55,7 @@
   }
   #about-Pursue-dynamic-span {
     color: #0026ff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer; /* 鼠标指针样式为手型 */
     transition: color 1s ease; /* 添加颜色变化的过渡效果 */
@@ -140,3 +140,26 @@
     font-size: 0.8rem;
     color: #ffacee;
   }
+  #about-Specialties-1 {
+    color: #ffacee;
+  }
+/* 应用动画到文字 */
+#about-Specialties-max {
+  font-size: 1.5em;
+  background-image: linear-gradient(to right, #ffefa9, #FFD700);
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  display: inline-block; /* 使span元素成为块级元素，允许缩放 */
+  animation: smooth-enlarge 1.5s infinite ease-in-out; /* 动画名为smooth-enlarge，持续时间2秒，循环无限次 */
+  vertical-align: middle; /* 垂直对齐 */
+}
+  /* 定义关键帧动画 */
+  @keyframes smooth-enlarge {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
