@@ -82,7 +82,7 @@
     line-height: 1.5;
     color: #666;
   }
-  .about-me-color {
+  .about-me-color , .about-blog-color {
     font-weight: bold;
   }
   .about-blog , .about-connect, .about-Pursue {
