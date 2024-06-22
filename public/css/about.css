@@ -62,6 +62,21 @@
     position: relative; /* 让文字动画可以相对于自身元素进行定位 */
     display: inline-block; /* 行内元素转为块级元素，以便应用动画 */
   }
+  .about-motto-zuoyouming {
+    color: #949291;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  #about-motto-1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #949291;
+  }
+  #about-motto-2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4c4948;
+  }
   .about-me {
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -69,7 +84,6 @@
     margin: 20px 0;
     padding: 20px;
     overflow: hidden;
-    border-left: 3px solid #2e405b;
   }
   .about-me h2 , .about-blog h2 , .about-connect h2 {
     color: #333;
@@ -85,14 +99,13 @@
   .about-me-color , .about-blog-color {
     font-weight: bold;
   }
-  .about-blog , .about-connect, .about-Pursue {
+  .about-blog , .about-motto , .about-connect, .about-Pursue {
     background-color: #FFFFFF;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     margin: 20px 0;
     padding: 20px;
     overflow: hidden;
-
   }
   .about-blog p {
     margin-bottom: 20px;
@@ -135,7 +148,7 @@
     font-size: 2.0rem;
     font-weight: bold;
   }
-  .about-Specialties p {
+  .about-Specialties-techang {
     font-weight: bold;
     font-size: 0.8rem;
     color: #ffacee;
