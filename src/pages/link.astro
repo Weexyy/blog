@@ -5,65 +5,102 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
 <LayoutDefault>
     <link rel="stylesheet" href="/css/link.css">
     <h2 class="page-title">友情链接</h2>
-    <div class="card-container" id="card-container">
-        <!-- JavaScript 动态生成的友链卡片将在这里呈现 -->
+
+    <!-- 技术类友链容器 -->
+    <div class="category-container" id="tech-container">
+        <h3 class="category-title">技术类</h3>
+        <div class="card-container" id="tech-cards">
+            <!-- 技术类友链卡片将在这里呈现 -->
+        </div>
+    </div>
+
+    <!-- 生活类友链容器 -->
+    <div class="category-container" id="life-container">
+        <h3 class="category-title">生活类</h3>
+        <div class="card-container" id="life-cards">
+            <!-- 生活类友链卡片将在这里呈现 -->
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const friends = [
+            const friends: {
+                name: string;
+                avatar: string;
+                description: string;
+                url: string;
+                category: string;
+            }[] = [
                 {
                     name: "Moeyy Blog",
                     avatar: "https://moeyy.cn/logourl",
                     description: "一条有远大理想的咸鱼。",
-                    url: "https://moeyy.cn"
+                    url: "https://moeyy.cn",
+                    category: "tech"
                 },
                 {
                     name: "安知鱼",
                     avatar: "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
                     description: "生活明朗，万物可爱。",
-                    url: "https://blog.anheyu.com/"
+                    url: "https://blog.anheyu.com/",
+                    category: "life"
                 }
                 // 可以在这里继续添加更多友链对象
             ];
 
-            const container = document.getElementById('card-container');
+            // 根据分类将友链添加到对应的容器中
+            friends.forEach((friend) => {
+                const card = createCard(friend);
 
-            if (container) { // 检查容器是否存在
-                friends.forEach(friend => {
-                    const card = document.createElement('a');
-                    card.href = friend.url;
-                    card.target = "_blank";
-                    card.rel = "noopener noreferrer";
-                    card.classList.add('card');
-
-                    const avatar = document.createElement('img');
-                    avatar.src = friend.avatar;
-                    avatar.alt = `${friend.name} 的头像`;
-                    avatar.classList.add('avatar');
-
-                    const contentWrapper = document.createElement('div');
-                    contentWrapper.classList.add('content-wrapper');
-
-                    const name = document.createElement('div');
-                    name.textContent = friend.name;
-                    name.classList.add('name');
-
-                    const description = document.createElement('div');
-                    description.textContent = friend.description;
-                    description.classList.add('description');
-
-                    contentWrapper.appendChild(name);
-                    contentWrapper.appendChild(description);
-
-                    card.appendChild(avatar);
-                    card.appendChild(contentWrapper);
-
-                    container.appendChild(card);
-                });
-            } else {
-                console.error('无法找到 card-container 元素。');
-            }
+                if (friend.category === 'tech') {
+                    const techContainer = document.getElementById('tech-cards');
+                    if (techContainer) {
+                        techContainer.appendChild(card);
+                    }
+                } else if (friend.category === 'life') {
+                    const lifeContainer = document.getElementById('life-cards');
+                    if (lifeContainer) {
+                        lifeContainer.appendChild(card);
+                    }
+                }
+            });
         });
+
+        function createCard(friend: {
+            name: string;
+            avatar: string;
+            description: string;
+            url: string;
+        }) {
+            const card = document.createElement('a');
+            card.href = friend.url;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            card.classList.add('card');
+
+            const avatar = document.createElement('img');
+            avatar.src = friend.avatar;
+            avatar.alt = `${friend.name} 的头像`;
+            avatar.classList.add('avatar');
+
+            const contentWrapper = document.createElement('div');
+            contentWrapper.classList.add('content-wrapper');
+
+            const name = document.createElement('div');
+            name.textContent = friend.name;
+            name.classList.add('name');
+
+            const description = document.createElement('div');
+            description.textContent = friend.description;
+            description.classList.add('description');
+
+            contentWrapper.appendChild(name);
+            contentWrapper.appendChild(description);
+
+            card.appendChild(avatar);
+            card.appendChild(contentWrapper);
+
+            return card;
+        }
     </script>
 </LayoutDefault>
