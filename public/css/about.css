@@ -44,7 +44,7 @@
     font-weight: bold;
   }
   .about-Pursue-zhuiqiu {
-    color: #333;
+    color: #949291;
     font-size: 0.8rem;
     margin-bottom: 5px;
   }
@@ -99,7 +99,7 @@
   .about-me-color , .about-blog-color {
     font-weight: bold;
   }
-  .about-blog , .about-motto , .about-connect, .about-Pursue {
+  .about-blog , .about-personality , .about-motto , .about-connect, .about-Pursue {
     background-color: #FFFFFF;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -156,17 +156,17 @@
   #about-Specialties-1 {
     color: #ffacee;
   }
-/* 应用动画到文字 */
-#about-Specialties-max {
-  font-size: 1.5em;
-  background-image: linear-gradient(to right, #ffefa9, #FFD700);
-  background-clip: text;
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  display: inline-block; /* 使span元素成为块级元素，允许缩放 */
-  animation: smooth-enlarge 1.5s infinite ease-in-out; /* 动画名为smooth-enlarge，持续时间2秒，循环无限次 */
-  vertical-align: middle; /* 垂直对齐 */
-}
+  /* 应用动画到文字 */
+  #about-Specialties-max {
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, #ffefa9, #FFD700);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    display: inline-block; /* 使span元素成为块级元素，允许缩放 */
+    animation: smooth-enlarge 1.5s infinite ease-in-out; /* 动画名为smooth-enlarge，持续时间2秒，循环无限次 */
+    vertical-align: middle; /* 垂直对齐 */
+  }
   /* 定义关键帧动画 */
   @keyframes smooth-enlarge {
     0%, 100% {
@@ -175,4 +175,38 @@
     50% {
         transform: scale(1.1);
     }
-}
+  }
+  .about-personality-xingge {
+    font-size: 0.8rem;
+    color: #949291;
+    margin-bottom: 10px;
+  }
+  .about-personality-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .about-personality-ESFJ {
+    max-width: 50%;
+  }
+  .about-personality-ESFJ h2 {
+  color: #33a474;
+  font-size: 2rem;
+  font-weight: bold;
+  font-size: 30px;
+  }
+  .about-personality-ESFJ h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #4c4948;
+  }
+  .about-personality-img {
+      max-width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .about-personality-more {
+    font-size: 0.8rem;
+    color: #949291;
+  }
