@@ -44,6 +44,14 @@ export const THEME_CONFIG: App.Locals['config'] = {
       name: "About",
       href: "/about",
     },
+    {
+      name: "友链",
+      href: "/link",
+    },
+    {
+      name: "留言",
+      href: "/comments",
+    },
   ],
   /** your category name mapping, which the `path` will be shown in the url */
   category_map: [
