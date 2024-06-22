@@ -1,0 +1,63 @@
+---
+import LayoutDefault from '~/layouts/LayoutDefault.astro'
+---
+
+<LayoutDefault>
+    <link rel="stylesheet" href="/css/link.css">
+    <h2 class="page-title">友链页面</h2>
+    <div class="card-container" id="card-container">
+        {/* JavaScript 动态生成的友链卡片将在这里呈现 */}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const friends = [
+                {
+                    name: "Moeyy Blog",
+                    avatar: "https://moeyy.cn/logourl",
+                    description: "一条有远大理想的咸鱼。",
+                    url: "https://moeyy.cn"
+                }
+                // 可以在这里继续添加更多友链对象
+            ];
+
+            const container = document.getElementById('card-container');
+
+            if (container) { // 检查容器是否存在
+                friends.forEach(friend => {
+                    const card = document.createElement('a');
+                    card.href = friend.url;
+                    card.target = "_blank";
+                    card.rel = "noopener noreferrer";
+                    card.classList.add('card');
+
+                    const avatar = document.createElement('img');
+                    avatar.src = friend.avatar;
+                    avatar.alt = `${friend.name} 的头像`;
+                    avatar.classList.add('avatar');
+
+                    const contentWrapper = document.createElement('div');
+                    contentWrapper.classList.add('content-wrapper');
+
+                    const name = document.createElement('div');
+                    name.textContent = friend.name;
+                    name.classList.add('name');
+
+                    const description = document.createElement('div');
+                    description.textContent = friend.description;
+                    description.classList.add('description');
+
+                    contentWrapper.appendChild(name);
+                    contentWrapper.appendChild(description);
+
+                    card.appendChild(avatar);
+                    card.appendChild(contentWrapper);
+
+                    container.appendChild(card);
+                });
+            } else {
+                console.error('无法找到 card-container 元素。');
+            }
+        });
+    </script>
+</LayoutDefault>
