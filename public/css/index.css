@@ -128,3 +128,23 @@ h3 {
 .social-link .icon {
     margin-right: 3px; /* 调整图标与文本之间的间距 */
 }
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(10deg); }
+    20% { transform: rotate(0deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .wave {
+    display: inline-block;
+    font-size: 4rem;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%; 
+  }
+  @media (max-width: 425px) {
+    .wave {
+        font-size: 2.5rem;
+    }
+  }
