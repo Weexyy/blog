@@ -7,6 +7,14 @@
     margin: 0 auto 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  .about-blog , .about-personality , .about-motto , .about-connect, .about-Pursue , .about-skills {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    padding: 20px;
+    overflow: hidden;
+  }
   .about h2 {
     color: #333;
     font-size: 1.8rem;
@@ -43,7 +51,7 @@
     overflow: hidden;
     font-weight: bold;
   }
-  .about-Pursue-zhuiqiu {
+  .about-Pursue-title {
     color: #949291;
     font-size: 0.8rem;
     margin-bottom: 5px;
@@ -62,7 +70,7 @@
     position: relative; /* 让文字动画可以相对于自身元素进行定位 */
     display: inline-block; /* 行内元素转为块级元素，以便应用动画 */
   }
-  .about-motto-zuoyouming {
+  .about-motto-title {
     color: #949291;
     font-size: 0.8rem;
     margin-bottom: 5px;
@@ -98,14 +106,6 @@
   }
   .about-me-color , .about-blog-color {
     font-weight: bold;
-  }
-  .about-blog , .about-personality , .about-motto , .about-connect, .about-Pursue {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    margin: 20px 0;
-    padding: 20px;
-    overflow: hidden;
   }
   .about-blog p {
     margin-bottom: 20px;
@@ -148,7 +148,7 @@
     font-size: 2.0rem;
     font-weight: bold;
   }
-  .about-Specialties-techang {
+  .about-Specialties-title {
     font-weight: bold;
     font-size: 0.8rem;
     color: #ffacee;
@@ -176,7 +176,7 @@
         transform: scale(1.1);
     }
   }
-  .about-personality-xingge {
+  .about-personality-title {
     font-size: 0.8rem;
     color: #949291;
     margin-bottom: 10px;
@@ -209,4 +209,20 @@
   .about-personality-more {
     font-size: 0.8rem;
     color: #949291;
+  }
+  .about-skills-title {
+    font-size: 0.8rem;
+    color: #949291;
+    margin-bottom: 10px;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #666;
   }
