@@ -6,61 +6,53 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
     <link rel="stylesheet" href="/css/link.css">
     <h2 class="page-title">友情链接</h2>
 
-    <!-- 技术类友链容器 -->
-    <div class="category-container" id="tech-container">
-        <h3 class="category-title">技术类</h3>
-        <div class="card-container" id="tech-cards">
-            <!-- 技术类友链卡片将在这里呈现 -->
-        </div>
+    <div class="category-container" id="recommended-container">
+        <h3 class="category-title">推荐访问</h3>
+        <div class="card-container" id="recommended-cards"></div>
     </div>
 
-    <!-- 生活类友链容器 -->
-    <div class="category-container" id="life-container">
-        <h3 class="category-title">生活类</h3>
-        <div class="card-container" id="life-cards">
-            <!-- 生活类友链卡片将在这里呈现 -->
-        </div>
+    <div class="category-container" id="friends-container">
+        <h3 class="category-title">小伙伴们</h3>
+        <div class="card-container" id="friends-cards"></div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const friends: {
+            type Friend = {
                 name: string;
                 avatar: string;
                 description: string;
                 url: string;
                 category: string;
-            }[] = [
+            };
+
+            const friends: Friend[] = [
                 {
                     name: "Moeyy Blog",
                     avatar: "https://moeyy.cn/logourl",
                     description: "一条有远大理想的咸鱼。",
                     url: "https://moeyy.cn",
-                    category: "tech"
+                    category: "recommended"
                 },
                 {
                     name: "安知鱼",
                     avatar: "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
                     description: "生活明朗，万物可爱。",
                     url: "https://blog.anheyu.com/",
-                    category: "life"
+                    category: "recommended"
                 }
-                // 可以在这里继续添加更多友链对象
             ];
 
-            // 根据分类将友链添加到对应的容器中
+            const recommendedContainer = document.getElementById('recommended-cards');
+            const friendsContainer = document.getElementById('friends-cards');
+
             friends.forEach((friend) => {
                 const card = createCard(friend);
-
-                if (friend.category === 'tech') {
-                    const techContainer = document.getElementById('tech-cards');
-                    if (techContainer) {
-                        techContainer.appendChild(card);
-                    }
-                } else if (friend.category === 'life') {
-                    const lifeContainer = document.getElementById('life-cards');
-                    if (lifeContainer) {
-                        lifeContainer.appendChild(card);
+                if (card) {
+                    if (friend.category === 'recommended' && recommendedContainer) {
+                        recommendedContainer.appendChild(card);
+                    } else if (friend.category === 'friends' && friendsContainer) {
+                        friendsContainer.appendChild(card);
                     }
                 }
             });
@@ -71,36 +63,18 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
             avatar: string;
             description: string;
             url: string;
-        }) {
-            const card = document.createElement('a');
-            card.href = friend.url;
-            card.target = "_blank";
-            card.rel = "noopener noreferrer";
-            card.classList.add('card');
-
-            const avatar = document.createElement('img');
-            avatar.src = friend.avatar;
-            avatar.alt = `${friend.name} 的头像`;
-            avatar.classList.add('avatar');
-
-            const contentWrapper = document.createElement('div');
-            contentWrapper.classList.add('content-wrapper');
-
-            const name = document.createElement('div');
-            name.textContent = friend.name;
-            name.classList.add('name');
-
-            const description = document.createElement('div');
-            description.textContent = friend.description;
-            description.classList.add('description');
-
-            contentWrapper.appendChild(name);
-            contentWrapper.appendChild(description);
-
-            card.appendChild(avatar);
-            card.appendChild(contentWrapper);
-
-            return card;
+        }): HTMLElement | null {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(`
+                <a href="${friend.url}" target="_blank" rel="noopener noreferrer" class="card">
+                    <img src="${friend.avatar}" alt="${friend.name} 的头像" class="avatar">
+                    <div class="content-wrapper">
+                        <div class="name">${friend.name}</div>
+                        <div class="description">${friend.description}</div>
+                    </div>
+                </a>
+            `, 'text/html');
+            return doc.body.firstChild as HTMLElement;
         }
     </script>
 </LayoutDefault>

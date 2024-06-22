@@ -1,69 +1,80 @@
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .page-title {
-    text-align: left;
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .category-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start; /* 卡片居左对齐 */
+}
+
+.page-title {
+  text-align: left; /* 标题靠左对齐 */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.category-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left; /* 分类标题靠左对齐 */
+}
+
+.category-container {
+  margin-top: 20px; /* 增加分类容器的上间距 */
+  margin-bottom: 20px; /* 增加分类容器的下间距 */
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  text-decoration: none; /* 移除链接的默认下划线 */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.card:hover .name,
+.card:hover .description {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
   .card {
-    position: relative;
-    border-radius: 8px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    padding: 16px;
+      width: 100%;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card:hover .name,
-  .card:hover .description {
-    color: #fff;
-  }
-  
-  .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 16px;
-  }
-  
-  .content-wrapper {
-    flex: 1;
-  }
-  
-  .name {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 8px;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .description {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #666;
-    transition: color 0.3s ease;
-  }
-  
+}
