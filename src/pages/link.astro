@@ -4,9 +4,9 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
 
 <LayoutDefault>
     <link rel="stylesheet" href="/css/link.css">
-    <h2 class="page-title">友链页面</h2>
+    <h2 class="page-title">友情链接</h2>
     <div class="card-container" id="card-container">
-        {/* JavaScript 动态生成的友链卡片将在这里呈现 */}
+        <!-- JavaScript 动态生成的友链卡片将在这里呈现 -->
     </div>
 
     <script>
@@ -17,6 +17,12 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
                     avatar: "https://moeyy.cn/logourl",
                     description: "一条有远大理想的咸鱼。",
                     url: "https://moeyy.cn"
+                },
+                {
+                    name: "安知鱼",
+                    avatar: "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
+                    description: "生活明朗，万物可爱。",
+                    url: "https://blog.anheyu.com/"
                 }
                 // 可以在这里继续添加更多友链对象
             ];
