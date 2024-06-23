@@ -29,6 +29,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.page-description p {
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+.my-url {
+  margin-top: 20px;
+}
+
+.my-url ul {
+  margin-left: 20px;
+}
+
 .category-container {
   margin-top: 20px; /* 增加分类容器的上间距 */
   margin-bottom: 20px; /* 增加分类容器的下间距 */
