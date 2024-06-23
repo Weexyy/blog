@@ -19,6 +19,15 @@
   text-align: left; /* 分类标题靠左对齐 */
 }
 
+.page-description {
+  position: relative;
+  padding: 20px;
+  background-color: #fff; /* 将背景色修改为白色 */
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .category-container {
   margin-top: 20px; /* 增加分类容器的上间距 */
   margin-bottom: 20px; /* 增加分类容器的下间距 */

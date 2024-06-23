@@ -5,54 +5,69 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
 <LayoutDefault>
     <link rel="stylesheet" href="/css/link.css">
     <h2 class="page-title">友情链接</h2>
-
-    <div class="category-container" id="recommended-container">
-        <h3 class="category-title">推荐访问</h3>
-        <div class="card-container" id="recommended-cards"></div>
+    <div class="page-description">
+        <p>若希望您的网站出现在本页面，您可以通过留言板留言，或邮箱联系我。</p>
+        <p>你需要通过以下信息：名称、头像、描述、链接</p>
+        <div class="my-url">下面是我的信息：
+            <p>name：Weixin Zheng </br>avatar：https://blog.weexy.cn/avatar.jpg</br>description：一条有远大梦想的咸鱼。</br>url：https://blog.weexy.cn/</p>
+        </div>
     </div>
 
-    <div class="category-container" id="friends-container">
+    <!-- 推荐访问类友链容器 -->
+    <div class="category-container" id="recommend-container">
+        <h3 class="category-title">推荐访问</h3>
+        <div class="card-container" id="recommend-cards">
+            <!-- 推荐访问类友链卡片将在这里呈现 -->
+        </div>
+    </div>
+
+    <!-- 小伙伴们类友链容器 -->
+    <div class="category-container" id="buddy-container">
         <h3 class="category-title">小伙伴们</h3>
-        <div class="card-container" id="friends-cards"></div>
+        <div class="card-container" id="buddy-cards">
+            <!-- 小伙伴们类友链卡片将在这里呈现 -->
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            type Friend = {
+            const friends: {
                 name: string;
                 avatar: string;
                 description: string;
                 url: string;
                 category: string;
-            };
-
-            const friends: Friend[] = [
-                {
-                    name: "Moeyy Blog",
-                    avatar: "https://moeyy.cn/logourl",
-                    description: "一条有远大理想的咸鱼。",
-                    url: "https://moeyy.cn",
-                    category: "recommended"
-                },
+            }[] = [
                 {
                     name: "安知鱼",
                     avatar: "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
                     description: "生活明朗，万物可爱。",
                     url: "https://blog.anheyu.com/",
-                    category: "recommended"
+                    category: "recommend"
+                },
+                {
+                    name: "Moeyy",
+                    avatar: "https://moeyy.cn/logourl",
+                    description: "一条有远大理想的咸鱼。",
+                    url: "https://moeyy.cn",
+                    category: "recommend"
                 }
+                // 可以在这里继续添加更多友链对象
             ];
 
-            const recommendedContainer = document.getElementById('recommended-cards');
-            const friendsContainer = document.getElementById('friends-cards');
-
+            // 根据分类将友链添加到对应的容器中
             friends.forEach((friend) => {
                 const card = createCard(friend);
-                if (card) {
-                    if (friend.category === 'recommended' && recommendedContainer) {
-                        recommendedContainer.appendChild(card);
-                    } else if (friend.category === 'friends' && friendsContainer) {
-                        friendsContainer.appendChild(card);
+
+                if (friend.category === 'recommend') {
+                    const recommendContainer = document.getElementById('recommend-cards');
+                    if (recommendContainer) {
+                        recommendContainer.appendChild(card);
+                    }
+                } else if (friend.category === 'buddy') {
+                    const buddyContainer = document.getElementById('buddy-cards');
+                    if (buddyContainer) {
+                        buddyContainer.appendChild(card);
                     }
                 }
             });
@@ -63,20 +78,40 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
             avatar: string;
             description: string;
             url: string;
-        }): HTMLElement | null {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(`
-                <a href="${friend.url}" target="_blank" rel="noopener noreferrer" class="card">
-                    <div class="avatar-wrapper">
-                        <img src="${friend.avatar}" alt="${friend.name} 的头像" class="avatar">
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="name">${friend.name}</div>
-                        <div class="description">${friend.description}</div>
-                    </div>
-                </a>
-            `, 'text/html');
-            return doc.body.firstChild as HTMLElement;
+        }) {
+            const card = document.createElement('a');
+            card.href = friend.url;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            card.classList.add('card');
+
+            const avatarWrapper = document.createElement('div');
+            avatarWrapper.classList.add('avatar-wrapper');
+
+            const avatar = document.createElement('img');
+            avatar.src = friend.avatar;
+            avatar.alt = `${friend.name} 的头像`;
+            avatar.classList.add('avatar');
+            avatarWrapper.appendChild(avatar);
+
+            const contentWrapper = document.createElement('div');
+            contentWrapper.classList.add('content-wrapper');
+
+            const name = document.createElement('div');
+            name.textContent = friend.name;
+            name.classList.add('name');
+
+            const description = document.createElement('div');
+            description.textContent = friend.description;
+            description.classList.add('description');
+
+            contentWrapper.appendChild(name);
+            contentWrapper.appendChild(description);
+
+            card.appendChild(avatarWrapper);
+            card.appendChild(contentWrapper);
+
+            return card;
         }
     </script>
 </LayoutDefault>
