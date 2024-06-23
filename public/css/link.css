@@ -9,6 +9,7 @@
   text-align: left; /* 标题靠左对齐 */
   font-size: 2em;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .category-title {
