@@ -67,7 +67,9 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
             const parser = new DOMParser();
             const doc = parser.parseFromString(`
                 <a href="${friend.url}" target="_blank" rel="noopener noreferrer" class="card">
-                    <img src="${friend.avatar}" alt="${friend.name} 的头像" class="avatar">
+                    <div class="avatar-wrapper">
+                        <img src="${friend.avatar}" alt="${friend.name} 的头像" class="avatar">
+                    </div>
                     <div class="content-wrapper">
                         <div class="name">${friend.name}</div>
                         <div class="description">${friend.description}</div>

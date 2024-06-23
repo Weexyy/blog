@@ -31,7 +31,7 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s, background-color 0.3s; /* 添加背景颜色的过渡动画 */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s, background-color 0.4s; /* 调整过渡动画的速度 */
   display: flex;
   align-items: center;
   padding: 16px;
@@ -39,20 +39,37 @@
 }
 
 .card:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #2e405b; /* 鼠标悬停时的背景颜色 */
 }
 
-.avatar {
+.avatar-wrapper {
+  overflow: hidden;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   margin-right: 16px;
+  transition: transform 0.4s ease; /* 添加头像容器的过渡动画 */
+}
+
+.card:hover .avatar-wrapper {
+  transform: translateX(-50%) scale(0); /* 图片向右移动并缩小直至隐藏 */
+}
+
+.avatar {
+  width: 100%; /* 头像图片的宽度 */
+  height: 100%; /* 头像图片的高度 */
+  object-fit: cover; /* 确保头像完整显示并且填充容器 */
 }
 
 .content-wrapper {
   flex: 1;
+  transform: translateX(0); /* 初始状态文字容器不移动 */
+  transition: transform 0.4s ease; /* 文字容器的过渡动画 */
+}
+
+.card:hover .content-wrapper {
+  transform: translateX(-80px); /* 文字容器向左移动 */
 }
 
 .name {
@@ -60,13 +77,13 @@
   font-weight: bold;
   margin-bottom: 8px;
   color: #333;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease; /* 调整文字颜色变化的速度 */
 }
 
 .description {
   font-size: 0.9em;
   color: #666;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease; /* 调整描述文字颜色变化的速度 */
 }
 
 .card:hover .name,
