@@ -1,5 +1,4 @@
 ---
-import ListItem from '~/components/ListItem.astro'
 import ListSection from '~/components/ListSection.astro'
 import LayoutDefault from '~/layouts/LayoutDefault.astro'
 import { getCategories, getPathFromCategory } from '~/utils/index'
@@ -10,8 +9,24 @@ const { category_map } = Astro.locals.config;
 const categories = await getCategories()
 ---
 
+<!-- 引用CSS文件 -->
+<link rel="stylesheet" href="/css/categories.css">
+
 <LayoutDefault>
-  <ListSection title={t('Categories')}>
-    {Array.from(categories).map(([key, value]) => <ListItem title={key} href={`/categories/${getPathFromCategory(key, category_map)}`} description={t('categories_count', value.length)} />)}
-  </ListSection>
+  <div class="container mx-auto px-4 py-8">
+    <ListSection title={t('Categories')} class="text-center mb-8">
+      <div class="flex flex-wrap justify-center gap-4">
+        {Array.from(categories).map(([key, value]) => (
+          <a 
+            href={`/categories/${getPathFromCategory(key, category_map)}`} 
+            class="category-item"
+          >
+            <span class="hash">#</span>
+            <span class="name">{key}</span>
+            <span class="count">{value.length}</span>
+          </a>
+        ))}
+      </div>
+    </ListSection>
+  </div>
 </LayoutDefault>
