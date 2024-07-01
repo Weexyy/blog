@@ -1,36 +1,52 @@
 .category-item {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border: 1px solid #d1d5db; /* Tailwind's gray-200 color */
-    border-radius: 0.5rem; /* Tailwind's rounded-lg */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-sm */
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .category-item:hover {
-    background-color: #2e405b;
-    color: white;
-  }
-  
-  .category-item .hash {
-    margin-right: 0.25rem; /* Tailwind's mr-1 */
-    font-size: 1.125rem; /* Tailwind's text-lg */
-    color: #4b5563; /* Tailwind's gray-600 */
-  }
-  
-  .category-item .name {
-    font-size: 1.125rem; /* Tailwind's text-lg */
-    color: #4b5563; /* Tailwind's gray-600 */
-  }
-  
-  .category-item .count {
-    margin-left: 0.5rem; /* Tailwind's ml-2 */
-    font-size: 0.875rem; /* Tailwind's text-sm */
-    color: #6b7280; /* Tailwind's gray-500 */
-    background-color: #f3f4f6; /* Tailwind's gray-100 */
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem; /* Tailwind's rounded */
-  }
-  
+  display: flex; /* 使用 Flex 布局 */
+  align-items: center; /* 垂直居中对齐 */
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid #d1d5db; /* Tailwind's gray-200 color */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-sm */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.category-item:hover {
+  background-color: #2e405b;
+  color: white;
+}
+
+.category-item:hover .hash,
+.category-item:hover .name {
+  color: white;
+}
+
+.category-item:hover .count {
+  background-color: #1c2a3a; /* Darker shade for contrast */
+  color: white;
+}
+
+.category-item .hash {
+  display: inline-block; /* 调整为 inline-block */
+  vertical-align: middle; /* 垂直居中对齐 */
+  margin-right: 0.25rem; /* 调整右边距 */
+  font-size: 1.125rem; /* Tailwind's text-lg */
+  color: #4b5563; /* Tailwind's gray-600 */
+}
+
+.category-item .name {
+  font-size: 1.125rem; /* Tailwind's text-lg */
+  color: #4b5563; /* Tailwind's gray-600 */
+  margin-right: auto; /* 将 name 推到最左边 */
+}
+
+.category-item .count {
+  font-size: 0.875rem; /* Tailwind's text-sm */
+  color: #6b7280; /* Tailwind's gray-500 */
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem; /* Tailwind's rounded */
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 0.25rem; /* 调整左边距 */
+}
