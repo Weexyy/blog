@@ -6,3 +6,6 @@
     padding: 20px;
     overflow: hidden;
 }
+.mt-5 {  /*隐藏下一页*/
+    display: none;
+}
