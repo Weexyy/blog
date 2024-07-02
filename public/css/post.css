@@ -9,3 +9,8 @@
 .mt-5 {  /*隐藏下一页*/
     display: none;
 }
+.all-post {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
