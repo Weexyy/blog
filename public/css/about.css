@@ -31,7 +31,7 @@
   .about-column {
     flex: 1;
     min-width: 300px;
-    max-width: 400px;
+    max-width: 380px;
   }
   .my-name h2 {
     color: #ffffff;
