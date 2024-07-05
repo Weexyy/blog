@@ -14,10 +14,6 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** your socials */
   socials: [
     {
-      name: "github",
-      href: "https://github.com/weexyy",
-    },
-    {
       name: "rss",
       href: "/atom.xml",
     }
@@ -41,16 +37,16 @@ export const THEME_CONFIG: App.Locals['config'] = {
       href: "/categories"
     },
     {
-      name: "About",
-      href: "/about",
-    },
-    {
       name: "友链",
       href: "/link",
     },
     {
       name: "留言",
       href: "/comments",
+    },
+    {
+      name: "About",
+      href: "/about",
     },
   ],
   /** your category name mapping, which the `path` will be shown in the url */
