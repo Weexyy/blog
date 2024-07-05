@@ -1,6 +1,5 @@
 ---
 import '~/styles/index.css'
-// https://sivan.github.io/heti
 import '~/styles/heti.min.css'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
@@ -13,30 +12,28 @@ interface Props {
   banner?: ImageMetadata
 }
 
-const props = Astro.props
+const props = Astro.props as Props
 const themeConfig = Astro.locals.config
-const { header } = Astro.locals.config
+const { header } = themeConfig
 
-const title = props.title ?? themeConfig.title
+const defaultTitle = props.title ?? themeConfig.title
 const desc = props.desc ?? themeConfig.desc
 const canonical = themeConfig.website
 
-const image =
-  props.banner &&
-  (await getImage({
-    src: props.banner,
-    format: "jpeg"
-  }))
-const optimizedImage = new URL(image?.src??"/placeholder.png", Astro.url).toString()
+const image = props.banner 
+  ? await getImage({ src: props.banner, format: "jpeg" })
+  : null
+
+const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toString()
 ---
 
-<html lang="en">
+<html lang="zh">
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <SEO
       charset="utf-8"
-      title={title}
+      title={defaultTitle}
       description={desc}
       extend={{
         link: [{ rel: 'icon', href: '/favicon.ico', type: 'image/jpg' }],
@@ -46,19 +43,33 @@ const optimizedImage = new URL(image?.src??"/placeholder.png", Astro.url).toStri
           { name: "twitter:creator", content: header.twitter },
           { name: "twitter:site", content: header.twitter },
           { name: "twitter:card", content: "summary_large_image" },
-          { name: "twitter:title", content: title },
+          { name: "twitter:title", content: defaultTitle },
           { name: "twitter:description", content: desc },
         ],
       }}
       openGraph={{
         basic: {
-          title: title,
+          title: defaultTitle,
           type: "article",
           image: optimizedImage,
           url: canonical,
         }
       }}
     />
+    <script>
+      const defaultTitle = document.title;
+
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          document.title = '(っ °Д °;)っ 访问的页面不存在了';
+        } else {
+          document.title = '(●\'◡\'●)噫？又好啦 ~';
+          setTimeout(() => {
+            document.title = defaultTitle;
+          }, 2000); // 3秒后恢复原来的标题
+        }
+      });
+    </script>
   </head>
   <body>
     <div un-max-lg="animate-fadein-down" un-lg="flex flex-row-reverse justify-between gap-4 px-8 mx-auto max-w-6xl" class="container contain-layout m-a">
