@@ -16,9 +16,13 @@ posts.forEach((post: Post) => {
   postByYear.get(year)!.push(post)
 })
 
+const totalPosts = posts.length
 ---
-
 <LayoutDefault>
+  <link rel="stylesheet" type="text/css" href="/css/archive.css">
+  <div class="post-count">
+    <p>已经写了<span id="post-count"> {totalPosts} </span>篇文章，继续加油！(●'◡'●)</p>
+  </div>
   <div un-flex="~ col gap-4">
     {
       Array.from(postByYear.entries()).map(([year, posts]) => (
