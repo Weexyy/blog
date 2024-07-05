@@ -56,11 +56,12 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
         }
       }}
     />
+
+    <!-- 动态标题 -->
     <script>
       const defaultTitle = document.title;
       const defaultIcon = '/favicon.ico';
       const hiddenIcon = '/hidden-favicon.ico';
-      const visibleIcon = '/visible-favicon.ico';
 
       function changeFavicon(src: string) {
         const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement | null;
@@ -80,14 +81,14 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
           changeFavicon(hiddenIcon);
         } else {
           document.title = '(●\'◡\'●)噫？又好啦 ~';
-          changeFavicon(visibleIcon);
+          changeFavicon(defaultIcon);
           setTimeout(() => {
             document.title = defaultTitle;
-            changeFavicon(defaultIcon);
-          }, 2000); // 3秒后恢复原来的标题和图标
+          }, 2000); // 2秒后恢复原来的标题
         }
       });
     </script>
+
   </head>
   <body>
     <div un-max-lg="animate-fadein-down" un-lg="flex flex-row-reverse justify-between gap-4 px-8 mx-auto max-w-6xl" class="container contain-layout m-a">
