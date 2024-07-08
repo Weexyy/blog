@@ -14,6 +14,14 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** your socials */
   socials: [
     {
+      name: "email",
+      href: "mailto:zhengweixin0101@outlook.com",
+    },
+    {
+      name: "github",
+      href: "https://github.com/zhengweixin0101",
+    },
+    {
       name: "rss",
       href: "/atom.xml",
     }
