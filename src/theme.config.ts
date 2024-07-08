@@ -49,10 +49,6 @@ export const THEME_CONFIG: App.Locals['config'] = {
       href: "/link",
     },
     {
-      name: "留言",
-      href: "/comments",
-    },
-    {
       name: "About",
       href: "/about",
     },
