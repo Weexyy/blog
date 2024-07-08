@@ -25,6 +25,8 @@ const image = props.banner
   : null
 
 const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toString()
+
+const year = new Date().getFullYear()
 ---
 
 <html lang="zh">
@@ -99,7 +101,9 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
       <main un-lg="py-20 min-w-xl animate-fadein-down" class="p-7.5">
         <slot />
       </main>
-      <Footer class="lg:hidden p-7.5" />
+      <footer class="lg:hidden p-7.5">
+        <p>© 2023-{year} By <a href="https://weexy.cn/">Weixin</a></p>
+      </footer>
     </div>
   </body>
 </html>
