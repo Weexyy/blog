@@ -81,7 +81,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
     //   loading: 'lazy',
     // },
      twikoo: {
-       envId: "https://twikoo.api.weexy.cn/.netlify/functions/twikoo",
+       envId: "https://twikoo.api.zhengweixin.top/",
      }
   }
 }
