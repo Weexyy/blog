@@ -46,12 +46,12 @@
     color: #ffffff;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 450px) {
     .projects {
-        display: block; /* 改为块级布局 */
+        display: inline;
         max-width: 300px;
     }
     .project-card {
-        width: 100%;                 /*卡片宽度*/
+        width: 100%;
     }
   }
