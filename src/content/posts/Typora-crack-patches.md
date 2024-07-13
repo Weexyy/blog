@@ -13,7 +13,7 @@ categories: [分享]
 
 将补丁放到 Typora 安装目录下，重启 Typora，就激活成功了。
 
-![pk33obF.png](https://s21.ax1x.com/2024/05/29/pk33obF.png)
+![1.png](https://cdn.zhengweixin.top/img/blog/typora-crack-patches/1.png)
 
 下载链接
 ----

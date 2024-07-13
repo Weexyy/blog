@@ -21,15 +21,15 @@ categories: [经验]
 
 先找到系统默认应用的apk位置（可以用**西米露**开启**显示更多应用信息**，一般在 `/produck/priv-app/` ，名称为软件名）
 
-![pk8BNY6.md.jpg](https://s21.ax1x.com/2024/05/31/pk8BNY6.md.jpg)
+![1](https://cdn.zhengweixin.top/img/blog/application-restart-recovery/1.jpg)
 
 安装应用，找到**安装后**的应用apk目录（一般在 `/data/app/` ，apk名称b`ase.apk`）
 
-![pk8BwlD.md.jpg](https://s21.ax1x.com/2024/05/31/pk8BwlD.md.jpg)
+![2](https://cdn.zhengweixin.top/img/blog/application-restart-recovery/2.jpg)
 
 将安装后的apk和同目录下oat文件夹中所有base字样改为默认应用的名称（如把`base.apk`改为`MiuiHome.apk`）
 
-![pk8ByTI.md.jpg](https://s21.ax1x.com/2024/05/31/pk8ByTI.md.jpg)
+![3](https://cdn.zhengweixin.top/img/blog/application-restart-recovery/3.jpg)
 
 然后替换原来的文件，最后手机管家里卸载更新
 大功告成

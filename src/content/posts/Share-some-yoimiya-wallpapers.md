@@ -15,10 +15,10 @@ categories: [分享]
 
 [1]: https://weexy.lanzouw.com/iXddh1iixp5g
 
-![pkwnpfe.jpg](https://s21.ax1x.com/2024/06/15/pkwnpfe.jpg)
-![pkwnE0P.jpg](https://s21.ax1x.com/2024/06/15/pkwnE0P.jpg)
-![pkwnAmt.jpg](https://s21.ax1x.com/2024/06/15/pkwnAmt.jpg)
-![pkwni6A.jpg](https://s21.ax1x.com/2024/06/15/pkwni6A.jpg)
-![pkwnCSH.jpg](https://s21.ax1x.com/2024/06/15/pkwnCSH.jpg)
-![pkwnPld.jpg](https://s21.ax1x.com/2024/06/15/pkwnPld.jpg)
-![pkwnFOI.jpg](https://s21.ax1x.com/2024/06/15/pkwnFOI.jpg)
+![1.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/1.jpg)
+![2.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/2.jpg)
+![3.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/3.jpg)
+![4.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/4.jpg)
+![5.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/5.jpg)
+![6.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/6.jpg)
+![7.jpg](https://cdn.zhengweixin.top/img/blog/share-some-yoimiya-wallpapers/7.jpg)

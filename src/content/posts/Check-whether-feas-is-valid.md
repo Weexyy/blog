@@ -13,13 +13,13 @@ categories: [经验]
 
 > 路径为：功能-附加功能-MIUI专属-温控-特定场景优化
 
-![特定场景优化](https://s21.ax1x.com/2024/06/01/pk8O2lT.md.jpg)
+![特定场景优化](https://cdn.zhengweixin.top/img/blog/check-whether-feas-is-valid/1.jpg)
 
 点击`BOOSTER`
 
 就能看到云控文件
 
-![pk8OR6U.md.jpg](https://s21.ax1x.com/2024/06/01/pk8OR6U.md.jpg)
+![BOOSTER](https://cdn.zhengweixin.top/img/blog/check-whether-feas-is-valid/2.jpg)
 
 看到第二行的日期了吗？如果像我这样，显示2028，那多半就吃上了。
 

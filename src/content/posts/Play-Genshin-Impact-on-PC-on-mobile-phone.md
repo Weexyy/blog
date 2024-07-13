@@ -31,7 +31,7 @@ PC 端原神里其实塞了一个手机版 UI 可以通过命令启动。
 
     use_mobile_platform -is_cloud 1 -platform_type CLOUD_THIRD_PARTY_MOBILE -popupwindow -borderless
 
-![pk3N0vn.png](https://s21.ax1x.com/2024/05/29/pk3N0vn.png)
+![1](https://cdn.zhengweixin.top/img/blog/play-genshin-impact-on-pc-on-mobile-phone/1.png)
 
 最后**保存**即可。
 通过这个快捷方式打开原神，就有手机的按键了。
@@ -50,15 +50,15 @@ PC 端原神里其实塞了一个手机版 UI 可以通过命令启动。
 手机下载**修改版 moonlight** 安装
 安装后，打开 app，会显示你的电脑，点击后会弹出一个窗口，有一个 4 位数的**配对码**
 
-![pk3NDuq.png](https://s21.ax1x.com/2024/05/29/pk3NDuq.png)
+![2](https://cdn.zhengweixin.top/img/blog/play-genshin-impact-on-pc-on-mobile-phone/2.png)
 
 回到刚才的网页，点顶栏的 PIN，输入配对码即可配对成功
 
-![pk3x6eg.md.png](https://s21.ax1x.com/2024/05/30/pk3x6eg.md.png)
+![3](https://cdn.zhengweixin.top/img/blog/play-genshin-impact-on-pc-on-mobile-phone/3.png)
 
 然后打开软件设置，取消勾选将触控屏作为触控板使用
 
-![pk3zT3t.png](https://s21.ax1x.com/2024/05/30/pk3zT3t.png)
+![4](https://cdn.zhengweixin.top/img/blog/play-genshin-impact-on-pc-on-mobile-phone/4.png)
 
 最后点击你的电脑，有两个选项（如果没添加游戏的话），点 **desktop**，手机就有电脑画面了，然后打开原神，就可以愉快的在手机上享受高画质了！
 

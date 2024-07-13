@@ -14,7 +14,7 @@ categories: [点评]
 
 Windows Copilot 是一种使用自然语言处理技术或大语言模型（如 GPT-4），帮助人们完成复杂或认知任务的应用程序或组件。
 
-![pk8SCvV.png](https://s21.ax1x.com/2024/05/30/pk8SCvV.png)
+![0](https://cdn.zhengweixin.top/img/blog/windows-copilot-experience/1.png)
 
 
 体验感受
@@ -61,8 +61,8 @@ Windows Copilot 在界面上，和 Bing Chat 网站基本**没啥区别**，连�
 方法和之前 Win11 使用方法一样，更新最新版本后，使用 ViveTool 工具启用。
 具体就不多讲了，百度一大堆。
 
-[1]: https://s21.ax1x.com/2024/05/30/pk8SEE4.png
-[2]: https://s21.ax1x.com/2024/05/30/pk8SQKK.png
-[3]: https://s21.ax1x.com/2024/05/30/pk8S1bD.png
-[4]: https://s21.ax1x.com/2024/05/30/pk8S8Ve.png
-[5]: https://s21.ax1x.com/2024/05/30/pk8SGUH.png
+[1]: https://cdn.zhengweixin.top/img/blog/windows-copilot-experience/2.png
+[2]: https://cdn.zhengweixin.top/img/blog/windows-copilot-experience/3.png
+[3]: https://cdn.zhengweixin.top/img/blog/windows-copilot-experience/4.png
+[4]: https://cdn.zhengweixin.top/img/blog/windows-copilot-experience/5.png
+[5]: https://cdn.zhengweixin.top/img/blog/windows-copilot-experience/6.png
