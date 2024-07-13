@@ -8,8 +8,6 @@ const { ...attrs } = Astro.props
 const year = new Date().getFullYear()
 ---
 <footer font-bold text-3 un-flex="~ col gap-1" un-lg="gap-3.5" {...attrs}>
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <script async src="/js/runtime.js"></script>
   <div class="runtime">本站已运行 <span id="runtime">载入中...</span> 天</div>
   <div class="busuanzi_value">
     <p>总访客数 <span id="busuanzi_value_site_uv">载入中...</span> 人</p>
