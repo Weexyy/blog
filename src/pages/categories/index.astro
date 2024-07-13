@@ -2,15 +2,13 @@
 import ListSection from '~/components/ListSection.astro'
 import LayoutDefault from '~/layouts/LayoutDefault.astro'
 import { getCategories, getPathFromCategory } from '~/utils/index'
+import '~/styles/categories.css'
 
 const { translate: t } = Astro.locals
 const { category_map } = Astro.locals.config;
 
 const categories = await getCategories()
 ---
-
-<!-- 引用CSS文件 -->
-<link rel="stylesheet" href="/css/categories.css">
 
 <LayoutDefault>
   <div class="container mx-auto px-4 py-8">

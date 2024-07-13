@@ -3,6 +3,7 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
 import ListSection from '~/components/ListSection.astro'
 import ListItem from '~/components/ListItem.astro'
 import { getPosts, formatDate } from '~/utils'
+import '~/styles/archive.css'
 
 const posts = await getPosts()
 
@@ -19,7 +20,6 @@ posts.forEach((post: Post) => {
 const totalPosts = posts.length
 ---
 <LayoutDefault>
-  <link rel="stylesheet" type="text/css" href="/css/archive.css">
   <div class="post-count">
     <p>已经写了<span id="post-count"> {totalPosts} </span>篇文章，继续加油！(●'◡'●)</p>
   </div>

@@ -4,6 +4,7 @@ import Post from '~/components/Post.astro'
 import Pagination from '~/components/Pagination.astro'
 import { getPosts, getPostDescription } from '~/utils'
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro'
+import '~/styles/post.css'
 
 const { translate: t } = Astro.locals
 
@@ -16,7 +17,6 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const { page } = Astro.props
 ---
-<link rel="stylesheet" type="text/css" href="/css/post.css">
 
 <LayoutDefault>
   <h2 class="all-post">全部文章</h2>
