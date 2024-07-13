@@ -4,7 +4,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** your name */
   author: "Weixin Zheng",
   /** website description */
-  desc: "一条有远大梦想的咸鱼...",
+  desc: "Weixin的小窝以及杂七杂八的分享~",
   /** your deployed domain */
   website: "https://zhengweixin.top/",
   /** your locale */
