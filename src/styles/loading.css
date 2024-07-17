@@ -1,0 +1,35 @@
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* 添加过渡效果，时间设为0.5秒 */
+  }
+  
+  .loading.hidden {
+    opacity: 0;
+    pointer-events: none; /* 防止点击事件影响隐藏状态 */
+  }
+  
+  .spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* 动画时间设为2秒 */
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
