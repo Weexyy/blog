@@ -7,13 +7,13 @@ categories: [分享]
 
 ## API
 
-https://api.zhengweixin.top/random-pictures
+https://img.api.zhengweixin.top/
 
 目前有一下分类：
 
-人物：[https://api.zhengweixin.top/random-pictures/figure](https://api.zhengweixin.top/random-pictures/figure)
+人物：[https://img.api.zhengweixin.top/figure](https://img.api.zhengweixin.top/figure)
 
-风景：[https://api.zhengweixin.top/random-pictures/scenery](https://api.zhengweixin.top/random-pictures/scenery)
+风景：[https://img.api.zhengweixin.top/scenery](https://img.api.zhengweixin.top/scenery)
 
 （直接访问即所有图片）
 
@@ -21,17 +21,17 @@ https://api.zhengweixin.top/random-pictures
 
 ## 预览
 
-![预览](https://api.zhengweixin.top/random-pictures)
+![预览](https://img.api.zhengweixin.top)
 
 ## 调用方法
 
 当成一张正常的图片用就行了。
 
 ```html
-<img src="https://api.zhengweixin.top/random-pictures">
+<img src="https://img.api.zhengweixin.top">
 ```
 
 ```markdown
-![img](https://api.zhengweixin.top/random-pictures)
+![img](https://img.api.zhengweixin.top)
 ```
 
