@@ -56,46 +56,6 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
         }
       }}
     />
-    <style>
-      body {
-        overflow: hidden; /* 隐藏页面滚动条 */
-      }
-
-      .loading {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: #fff; /* 设置一个适合你网站主题的背景颜色 */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 0.5s ease-out; /* 添加过渡效果 */
-      }
-
-      .loading.hidden {
-        opacity: 0; /* 设置透明度为0，实现隐藏 */
-        pointer-events: none; /* 防止点击事件影响隐藏状态 */
-      }
-
-      .spinner {
-        border: 8px solid rgba(0, 0, 0, 0.1);
-        border-left-color: #000;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 2s linear infinite; /* 动画时间设为2秒 */
-      }
-
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
 
     <!-- 动态标题 -->
     <script async src="/js/title.js"></script>
@@ -126,21 +86,5 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
     </div>
     <!-- 控制台输出 -->
     <script src="/js/console-log.js" is:inline></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const loading = document.getElementById("loading");
-        if (loading) {
-          // 页面加载时显示加载动画
-          loading.classList.remove('hidden'); // 移除隐藏类
-          setTimeout(() => {
-            loading.classList.add('hidden'); // 添加隐藏类，实现过渡效果
-            setTimeout(() => {
-              loading.style.display = "none"; // 隐藏加载动画
-              document.body.style.overflow = "auto"; // 恢复页面滚动条
-            }, 500); // 过渡效果时间，可以根据实际需要调整
-          })
-        }
-      });
-    </script>
   </body>
 </html>
