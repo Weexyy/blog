@@ -1,7 +1,6 @@
 ---
 import '~/styles/index.css'
 import '~/styles/heti.min.css'
-import '~/styles/loading.css'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
 import { SEO } from 'astro-seo'
@@ -57,6 +56,42 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
         }
       }}
     />
+    <style>
+      .loading {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.5s ease-out; /* 添加过渡效果，时间设为0.5秒 */
+      }
+
+      .loading.hidden {
+        opacity: 0;
+        pointer-events: none; /* 防止点击事件影响隐藏状态 */
+      }
+
+      .spinner {
+        border: 8px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite; /* 动画时间设为2秒 */
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
 
     <!-- 动态标题 -->
     <script async src="/js/title.js"></script>
@@ -66,8 +101,7 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <!-- 自建umami统计代码 -->
     <script defer src="https://statistics.zhengweixin.top/script.js" data-website-id="7441ce23-3587-41b6-8919-e42932fc65d7"></script>
-    <!-- 加载动画 -->
-    <script src="/js/loading.js" is:inline></script>
+
 
   </head>
   <body>
@@ -88,5 +122,15 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
     </div>
     <!-- 控制台输出 -->
     <script src="/js/console-log.js" is:inline></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const loading = document.getElementById("loading");
+        if (loading) {
+          setTimeout(() => {
+            loading.classList.add('hidden');
+          }, 500); // 0.5秒后触发隐藏动画
+        }
+      });
+    </script>
   </body>
 </html>
