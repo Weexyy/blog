@@ -57,11 +57,15 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
       }}
     />
     <style>
+      body {
+        overflow: hidden; /* 隐藏页面滚动条 */
+      }
+
       .loading {
         position: fixed;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: #fff; /* 设置一个适合你网站主题的背景颜色 */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -69,11 +73,11 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
         left: 0;
         z-index: 9999;
         opacity: 1;
-        transition: opacity 0.5s ease-out; /* 添加过渡效果，时间设为0.5秒 */
+        transition: opacity 0.5s ease-out; /* 添加过渡效果 */
       }
 
       .loading.hidden {
-        opacity: 0;
+        opacity: 0; /* 设置透明度为0，实现隐藏 */
         pointer-events: none; /* 防止点击事件影响隐藏状态 */
       }
 
@@ -126,9 +130,15 @@ const optimizedImage = new URL(image?.src ?? "/placeholder.png", Astro.url).toSt
       document.addEventListener("DOMContentLoaded", function() {
         const loading = document.getElementById("loading");
         if (loading) {
+          // 页面加载时显示加载动画
+          loading.classList.remove('hidden'); // 移除隐藏类
           setTimeout(() => {
-            loading.classList.add('hidden');
-          }, 500); // 0.5秒后触发隐藏动画
+            loading.classList.add('hidden'); // 添加隐藏类，实现过渡效果
+            setTimeout(() => {
+              loading.style.display = "none"; // 隐藏加载动画
+              document.body.style.overflow = "auto"; // 恢复页面滚动条
+            }, 500); // 过渡效果时间，可以根据实际需要调整
+          })
         }
       });
     </script>
