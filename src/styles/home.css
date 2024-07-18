@@ -6,12 +6,12 @@
 .profile-pic {
     float: right;
     margin-left: 800px;
-    margin-top: -350px;
+    margin-top: -30%;
     border-radius: 50%;
     overflow: hidden;
     width: 300px;
     height: 300px;
-    box-shadow: 0 0 5px #2e405b;
+    box-shadow: 0 0 5px #3e454f;
 }
 @media (max-width: 1024px) {
     .profile-pic {
