@@ -1,46 +1,55 @@
----
-import type { HTMLAttributes } from 'astro/types'
+<style>
+  header {
+    padding: 1rem 0;
+    display: flex;
+    margin-top: 1%;
+    font-size: 1.1rem
+  }
+  #header-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  #header-nav a {
+  text-decoration: none;
+  padding: 10px;
+  }
 
-type Props = HTMLAttributes<'header'>
+  #header-nav a.active {
+    background-image: linear-gradient(to right, #99f6cf, #99f3fa);
+    border-radius: 10px;
+  }
+</style>
 
-const { ...attrs } = Astro.props
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('#header-nav a');
 
-const { title, author, socials, navs } = Astro.locals.config
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      links.forEach(l => l.classList.remove('active'));
 
-const { translate: t } = Astro.locals
----
-
-<header un-lg="grow-1 justify-between items-start" un-flex="~ col gap-2.5" class="text-center" {...attrs}>
-  <hgroup
-    un-hover:lg="bg-foreground color-background pt-3.75 pb-8.75 "
-    un-lg=" write-vertical-right items-start px-2.5 pb-12 b-l-2px b-l-foreground-solid text-left"
-    un-flex="~ col gap-2.5"
-    class="cursor-pointer transition-[padding,background] duration-800 ease-in-out"
-  >
-    <a class="normal" href="/">
-      <h3 class="text-5 font-extrabold font-serif">{author}</h3>
-      <h1 class="text-8 font-extrabold font-serif">{title}</h1>
-    </a>
-  </hgroup>
-
-  <nav class="text-center font-bold" un-flex="~ col gap-2">
-    <ul un-lg="flex-col items-start text-4" class="text-3.5" un-flex="~ row gap-2 justify-center">
-      {
-        navs.map((nav) => (
-          <li>
-            <a href={nav.href}>{t(nav.name)}</a>
-          </li>
-        ))
+      const target = event.target as HTMLAnchorElement | null;
+      if (target) {
+        target.classList.add('active');
       }
-    </ul>
-    <ul un-flex="~ row gap-1 justify-center">
-      {
-        socials.map((soc) => (
-          <li>
-            <a href={soc.href} target="_blank" title={soc.name} class={`icon i-mdi-${soc.name}`} />
-          </li>
-        ))
-      }
-    </ul>
+    });
+  });
+
+  // Optional: Highlight the link based on the current URL
+  const currentPath = window.location.pathname;
+  const activeLink = document.querySelector(`#header-nav a[href="${currentPath}"]`);
+  if (activeLink) {
+    activeLink.classList.add('active');
+  }
+});
+</script>
+
+<header>
+  <nav id="header-nav">
+    <a href="/" id="header-home">Home</a>
+    <a href="/posts/page/1" id="header-posts">Posts</a>
+    <a href="/link" id="header-link">Link</a>
+    <a href="/apps" id="header-apps">APPs</a>
+    <a href="/about" id="header-about">About</a>
   </nav>
 </header>
