@@ -4,37 +4,6 @@ import '~/styles/link.css'
 ---
 
 <LayoutDefault>
-    <h2 class="page-title">友情链接</h2>
-    <div class="page-description">
-        <p>若希望您的网站出现在本页面，您可以通过留言板留言，或邮箱联系我。</p>
-        <p>你需要通过以下信息：<u>名称、头像、描述、链接</u></p>
-        <div class="my-url">下面是我的信息：
-            <ul>
-                <li>name：小郑同学</li>
-                <li>avatar：https://zhengweixin.top/avatar.jpg</li>
-                <li>url：https://zhengweixin.top/</li>
-                <li>description：一条有远大梦想的咸鱼。</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 推荐访问类友链容器 -->
-    <div class="category-container" id="recommend-container">
-        <h3 class="category-title">推荐访问</h3>
-        <div class="card-container" id="recommend-cards">
-            <!-- 推荐访问类友链卡片将在这里呈现 -->
-        </div>
-    </div>
-
-    <!-- 小伙伴们类友链容器 -->
-    <div class="category-container" id="buddy-container">
-        <h3 class="category-title">小伙伴们</h3>
-        <div class="card-container" id="buddy-cards">
-            <!-- 小伙伴们类友链卡片将在这里呈现 -->
-             <p>还没有朋友ಠ_ಠ</p>
-        </div>
-    </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const friends: {
@@ -45,23 +14,23 @@ import '~/styles/link.css'
                 category: string;
             }[] = [
                 {
+                    name: "Moeyy",
+                    avatar: "https://moeyy.cn/logourl",
+                    description: "一条有远大理想的咸鱼。",
+                    url: "https://moeyy.cn",
+                    category: "recommend"
+                },
+                {
                     name: "安知鱼",
                     avatar: "https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg",
                     description: "生活明朗，万物可爱。",
                     url: "https://blog.anheyu.com/",
                     category: "recommend"
                 },
-                {
-                    name: "Moeyy",
-                    avatar: "https://moeyy.cn/logourl",
-                    description: "一条有远大理想的咸鱼。",
-                    url: "https://moeyy.cn",
-                    category: "recommend"
-                }
-                // 可以在这里继续添加更多友链对象
+
+
             ];
 
-            // 根据分类将友链添加到对应的容器中
             friends.forEach((friend) => {
                 const card = createCard(friend);
 
@@ -120,4 +89,36 @@ import '~/styles/link.css'
             return card;
         }
     </script>
+    <div class="page-title">
+        <h2>&nbsp友链&nbsp</h2>
+    </div>
+    <div class="page-description">
+        <p>若希望您的网站出现在本页面，您可以通过 <a href="/comment"> 留言板 </a> 留言，或 <a href="mailto:admin@zhengweixin.top"> 邮件 </a> 联系我。</p>
+        <p>你需要提供以下信息：<span id="required-information">名字、头像、链接、描述</span></p>
+        <div class="my-url">下面是我的信息：
+            <ul>
+                <li>name：<span id="my-profile">ShinX</span></li>
+                <li>avatar：<span id="my-profile">https://zhengweixin.top/avatar.jpg</span></li>
+                <li>url：<span id="my-profile">https://zhengweixin.top/</span></li>
+                <li>description：<span id="my-profile">往日不悔，未来可期。</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 推荐访问类友链容器 -->
+    <div class="category-container" id="recommend-container">
+        <h3 class="category-title">推荐访问</h3>
+        <div class="card-container" id="recommend-cards">
+            <!-- 推荐访问类友链卡片将在这里呈现 -->
+        </div>
+    </div>
+
+    <!-- 小伙伴们类友链容器 -->
+    <div class="category-container" id="buddy-container">
+        <h3 class="category-title">小伙伴们</h3>
+        <div class="card-container" id="buddy-cards">
+            <!-- 小伙伴们类友链卡片将在这里呈现 -->
+             <p>还没有朋友ಠ_ಠ</p>
+        </div>
+    </div>
 </LayoutDefault>

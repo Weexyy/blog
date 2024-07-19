@@ -2,51 +2,45 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  justify-content: flex-start; /* 卡片居左对齐 */
 }
-
-.page-title {
-  text-align: left; /* 标题靠左对齐 */
-  font-size: 2em;
-  margin-bottom: 20px;
+.page-description {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
+}
+.page-description a , #required-information{
+  text-decoration:underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+}
+.page-description p {
+  margin-top: 3px;
   font-weight: bold;
 }
-
+.my-url {
+  margin-top: 20px;
+}
+.my-url ul {
+  margin-left: 20px;
+}
+#my-profile {
+  background-image: linear-gradient(to right, #99f6cf, #99f3fa);
+  user-select: text;
+  font-weight:bold
+}
 .category-title {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
-  text-align: left; /* 分类标题靠左对齐 */
 }
-
-.page-description {
-  position: relative;
-  padding: 20px;
-  background-color: #fff; /* 将背景色修改为白色 */
-  border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.page-description p {
-  margin-top: 3px;
-  font-weight: bold;
-}
-
-.my-url {
-  margin-top: 20px;
-}
-
-.my-url ul {
-  margin-left: 20px;
-}
-
 .category-container {
   margin-top: 20px; /* 增加分类容器的上间距 */
   margin-bottom: 20px; /* 增加分类容器的下间距 */
 }
-
 .card {
   position: relative;
   border-radius: 8px;
@@ -60,7 +54,6 @@
   padding: 16px;
   text-decoration: none; /* 移除链接的默认下划线 */
 }
-
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #2e405b; /* 鼠标悬停时的背景颜色 */
