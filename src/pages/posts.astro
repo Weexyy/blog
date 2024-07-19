@@ -2,11 +2,15 @@
 import LayoutDefault from '~/layouts/LayoutDefault.astro'
 import Post from '~/components/Post.astro'
 import { getPosts, getPostDescription } from '~/utils'
+import '~/styles/post.css'
 
-const posts = (await getPosts()).slice(0, 5)
+const posts = (await getPosts()).slice(0, 999999999)
 ---
 
 <LayoutDefault>
+  <div class="page-title">
+    <h2>文章</h2>
+  </div>
   <section contain-layout un-flex="~ col gap-7.5">
     {
       posts.map((post) => (
