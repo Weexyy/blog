@@ -1,17 +1,19 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
-
-type Props = HTMLAttributes<'footer'>
-
-const { ...attrs } = Astro.props
-
 const year = new Date().getFullYear()
 ---
-<footer font-bold text-3 un-flex="~ col gap-1" un-lg="gap-3.5" {...attrs}>
-  <div class="runtime">本站已运行 <span id="runtime">载入中...</span> 天</div>
-  <div class="busuanzi_value">
-    <p>总访客数 <span id="busuanzi_value_site_uv">载入中...</span> 人</p>
-    <p>总访问量 <span id="busuanzi_value_site_pv">载入中...</span> 次</p>
+<footer class="footer">
+  <div id="copyright">
+    <p>© 2023-{year} By <a href="https://zhengweixin.top/">ShinX</a></p>
   </div>
-  <p>© 2023-{year} By <a href="https://zhengweixin.top/">Weixin</a></p>
 </footer>
+
+<style>
+footer {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid #ddd;
+}
+#copyright {
+  color: #787878;
+}
+</style>
