@@ -1,3 +1,6 @@
+footer {
+  margin-top: 50px;
+}
 .posts-list {
   display: flex;
   flex-direction: column;
@@ -7,7 +10,7 @@
 .post-card {
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: -2px 2px 10px #00ffaa;
+  box-shadow: 0px 2px 5px #00ffaa;
   will-change: transform;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -23,7 +26,7 @@
 }
 .post-mate {
   display: inline;
-  background-image: linear-gradient(to right, #00ef9f, #02d0d4);
+  background-image: linear-gradient(to right, #00cb87, #02d0d4);
   background-clip: text;
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
