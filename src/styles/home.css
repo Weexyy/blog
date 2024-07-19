@@ -1,40 +1,21 @@
-.text-center , .max-lg\:hidden {  /*隐藏侧栏*/
-    display: none;
+body {
+    white-space: nowrap;
 }
-
-
 .profile-pic {
+    pointer-events:none;
     float: right;
     margin-left: 800px;
-    margin-top: -30%;
+    margin-top: -300px;
     border-radius: 50%;
     overflow: hidden;
     width: 300px;
     height: 300px;
-    box-shadow: 0 0 5px #3e454f;
-}
-@media (max-width: 1024px) {
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-        margin-top: -300px;
-    }
-  }
-  @media (max-width: 600px) {
-    .profile-pic {
-        display: none;
-    }
-  }
-  
+    box-shadow: 0 0 20px #00000076;
+} 
 h2 {
     margin-top: 70px;
     font-size: 3rem;
 }
-@media (max-width: 425px) {
-    h2 {
-        font-size: 1.5rem;
-    }
-  }
 h3 {
     font-size: 3.5rem;
     margin-bottom: 15px;
@@ -47,31 +28,10 @@ h3 {
     -webkit-text-fill-color: transparent; 
     font-weight: bold;
 }
-@media (max-width: 768px) {
-    h3 {
-        font-size: 2.5rem;
-    }
-  }
-@media (max-width: 425px) {
-    h3 {
-        font-size: 2.rem;
-    }
-  }
-@media (max-width: 425px) {
-    h3 {
-        font-size: 1.5rem;
-    }
-  }
-  
 .description {
     margin-top: 25px;
     font-size: 1.4rem;
 }
-@media (max-width: 425px) {
-    .description {
-        font-size: 1rem;
-    }
-  }
 .developer , .gamer {
     background: linear-gradient(to right, #00ffaa, #00fbff);
     border-radius: 5px;
@@ -92,11 +52,6 @@ h3 {
     font-weight: bold;
     border-radius: 5px;
 }
-@media (max-width: 425px) {
-    .social-link {
-        font-size: 0.8rem;
-    }
-  }
 .social-link .icon {
     margin-right: 3px; /* 调整图标与文本之间的间距 */
 }
@@ -115,8 +70,21 @@ h3 {
     animation: wave 2s infinite;
     transform-origin: 70% 70%; 
   }
-  @media (max-width: 425px) {
-    .wave {
-        font-size: 2.5rem;
-    }
+  @media (max-width: 950px) {
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    } 
+  }
+  @media (max-width: 850px) {
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-top: -320px;
+    } 
+  }
+  @media (max-width: 700px) {
+    .profile-pic {
+        display: none;
+    } 
   }
