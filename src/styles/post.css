@@ -1,16 +1,35 @@
-.heti {
-    background-color: #FFFFFF;
-    border-radius: 5px;  /*圆角*/
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin: -5px 0;
-    padding: 20px;
-    overflow: hidden;
-}
-.mt-5 {  /*隐藏下一页*/
+.mt-5 {
     display: none;
 }
-.all-post {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 30px;
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4%;
+}
+.post-card {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #00ffaa;
+  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post-card:hover {
+  transform: scale(1.01);
+}
+.post-title {
+  margin: 0 0 0.5rem;
+  text-decoration:underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.3em;
+
+}
+.post-mate {
+  display: inline;
+  background-image: linear-gradient(to right, #00ef9f, #02d0d4);
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  font-weight: bold;
 }
