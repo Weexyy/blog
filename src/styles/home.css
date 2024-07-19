@@ -1,6 +1,9 @@
 body {
     white-space: nowrap;
 }
+.container {
+    margin-bottom: 25%;
+  }
 .profile-pic {
     pointer-events:none;
     float: right;
@@ -38,13 +41,14 @@ h3 {
     font-weight: bold;
 }
 .socials {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-left: -10px;
     display: flex;
     gap: 5px; /* 调整链接之间的间距 */
 }
 .social-link {
     margin: 0 10px;
-    color: #2e405b; 
+    color: #434343; 
     font-size: 1rem;
     text-decoration: none;
     display: flex;

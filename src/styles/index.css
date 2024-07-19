@@ -36,7 +36,3 @@ a {
   right: 0;
   z-index: 1000; /* 确保它在最上层 */
 }
-
-.container {
-  margin-bottom: 22%;
-}
