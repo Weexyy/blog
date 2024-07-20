@@ -13,7 +13,7 @@ categories: [经验,分享]
 
 我的Turbo3已经解了
 
-![pkc0gsS.md.png](https://cdn.zhengweixin.top/img/blog/xiaomi-community-level-5-unlock/1.png)
+![pkc0gsS.png](https://cdn.zhengweixin.top/img/blog/xiaomi-community-level-5-unlock/1.png)
 
 ------
 
@@ -30,7 +30,7 @@ categories: [经验,分享]
 
 我是尝试了2次才成功的，卸载adb安装的设置，再清除原设置数据，重新adb安装设置重新来。不行多试几次。
 
-![pkgcAET.md.png](https://cdn.zhengweixin.top/img/blog/xiaomi-community-level-5-unlock/2.png)
+![pkgcAET.png](https://cdn.zhengweixin.top/img/blog/xiaomi-community-level-5-unlock/2.png)
 
 ## 下载链接
 

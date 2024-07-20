@@ -13,7 +13,7 @@ console.log(`%c本站已经运行了 %c${days} %c天`,"font-size: 15px; color: g
 
 //版权归属
 const year = new Date().getFullYear()
-console.log(`©2024-${year} By Weixin Zheng`);
+console.log(`©2023-${year} By Weixin Zheng`);
 
 //其他
 console.log(``);
