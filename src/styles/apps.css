@@ -44,16 +44,28 @@
 
 .project-card a {
     display: inline-block;
+    position: relative; /* 为伪元素定位 */
     margin-top: 10px;
     padding: 5px 10px;
     color: #000000;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
-.project-card a:hover {
-    background-color: #2e405b;
-    color: #ffffff;
+.project-card a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 1px;
+    left: 0;
+    background: linear-gradient(to right, #00ffaa, #00fbff);
+    transition: width 0.3s ease;
+}
+
+.project-card a:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
