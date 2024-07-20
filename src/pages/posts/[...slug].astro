@@ -142,15 +142,22 @@ function getUrl(slug: string) {
 .post-card img {
   border-radius: 8px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* 阴影效果 */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* 平滑过渡阴影和缩放效果 */
+}
+.post-card img:hover {
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5); /* 鼠标悬停时加深阴影 */
+  transform: scale(1.002); /* 鼠标悬停时轻微放大图片 */
 }
 .post-card pre {
   margin-bottom: 5px;
-  padding: 10px; /* 设置内边距 */
+  padding: 8px; /* 设置内边距 */
   border-radius: 8px; /* 设置圆角 */
 }
 .post-card code {
   background: #282c34;
-  color: #abb2bf;
+  color: #d2d2d2;
   padding: 3px; /* 设置内边距 */
   border-radius: 5px; /* 设置圆角 */
 }
