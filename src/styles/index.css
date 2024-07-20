@@ -39,3 +39,6 @@ a {
 .main {
   margin-bottom: 50px;
 }
+::selection {
+  background-color: #99f5d1; /* 设置选中文字的背景颜色 */
+}
