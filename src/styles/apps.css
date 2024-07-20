@@ -17,6 +17,9 @@
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column; /* 垂直布局 */
+    justify-content: space-between; /* 使内容和链接分开 */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 16px; /* 圆角 */
@@ -40,6 +43,7 @@
 .project-card p {
     color: #555;
     margin-top: 3px;
+    flex-grow: 1; /* 占据剩余空间 */
 }
 
 .project-card a {
@@ -76,8 +80,9 @@
 
 @media (max-width: 450px) {
     .projects {
-        display: inline;
+        display: block;
         max-width: 300px;
+        margin: 0 auto;
     }
     .project-card {
         width: 100%;
