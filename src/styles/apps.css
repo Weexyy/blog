@@ -1,3 +1,9 @@
+* {
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
 .apps {
     text-align: left; /* 标题靠左显示 */
     padding: 20px 0; /* 减少顶部填充 */
