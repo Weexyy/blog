@@ -21,12 +21,6 @@ a {
   background-image: linear-gradient(to right, #00ffaa, #00fbff);
   border-radius: 5px;
 }
-* {
-  -webkit-user-select: none; /* Chrome, Safari, Opera */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
 #top-line {
   height: 5px; /* 横线的高度 */
   background: linear-gradient(to right, #00ff0d, #00eeff);
