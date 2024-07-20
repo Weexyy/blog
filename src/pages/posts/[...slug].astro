@@ -133,10 +133,8 @@ function getUrl(slug: string) {
   text-decoration-thickness: 2px;
 }
 .post-card hr {
-  border: none; /* 移除默认的边框 */
-  height: 1px; /* 设置高度 */
-  background-color: #99f5d1; /* 设置背景颜色 */
-  margin: 20px 0; /* 设置上下边距 */
+  border-top: 2px dashed #d3d3d3; /* 2px thick, dashed, light gray color */
+  margin: 20px 0;
 }
 .post-card p {
   line-height: 40px;
@@ -149,5 +147,18 @@ function getUrl(slug: string) {
   margin-bottom: 5px;
   padding: 10px; /* 设置内边距 */
   border-radius: 8px; /* 设置圆角 */
+}
+.post-card code {
+  background: #99f5d1;
+}
+.post-card ul li {
+    margin: 10px 0;
+}
+
+.post-card ul li::before {
+    content: "•"; /* 在每个列表项前添加一个小圆点 */
+    margin-right: 10px;
+    color: #00dfe3;
+    font-size: 20px; /* 调整圆点的大小 */
 }
 </style>
