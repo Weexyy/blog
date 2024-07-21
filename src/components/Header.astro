@@ -4,15 +4,15 @@
     display: flex;
     margin-top: 1%;
     margin-bottom: 5%;
-    font-size: 1.1rem
+    font-size: 1.1rem;
   }
   #header-nav {
     display: flex;
     gap: 1rem;
   }
   #header-nav a {
-  text-decoration: none;
-  padding: 10px;
+    text-decoration: none;
+    padding: 10px;
   }
 
   #header-nav a.active {
@@ -22,27 +22,30 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('#header-nav a');
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('#header-nav a');
 
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      links.forEach(l => l.classList.remove('active'));
+    links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        links.forEach(l => l.classList.remove('active'));
 
-      const target = event.target as HTMLAnchorElement | null;
-      if (target) {
-        target.classList.add('active');
+        const target = event.target as HTMLElement;
+        if (target) {
+          target.classList.add('active');
+        }
+      });
+    });
+
+    // Optional: Highlight the link based on the current URL
+    const currentPath = window.location.pathname;
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (currentPath === href || (href === '/posts' && currentPath.startsWith('/posts/'))) {
+        link.classList.add('active');
       }
     });
   });
-
-  // Optional: Highlight the link based on the current URL
-  const currentPath = window.location.pathname;
-  const activeLink = document.querySelector(`#header-nav a[href="${currentPath}"]`);
-  if (activeLink) {
-    activeLink.classList.add('active');
-  }
-});
 </script>
 
 <header>
