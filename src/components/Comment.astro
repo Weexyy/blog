@@ -1,15 +1,27 @@
+<div class="comment-head">
+  <div>
+      <span class="icon i-mdi-comments"></span>
+      <span class="comment-litle">评论</span>
+  </div>
+</div>
 <div id="twikoo"></div>
 <script is:inline src="https://cdn.staticfile.org/twikoo/1.6.38/twikoo.all.min.js"></script>
 <script is:inline>
   twikoo.init({
-    envId: 'https://twikoo.api.zhengweixin.top/', // 将 '你的环境ID' 替换为你的 Twikoo 环境 ID
+    envId: 'https://twikoo.api.zhengweixin.top/', 
     el: '#twikoo'
   });
 </script>
 
 <style is:global>
-#twikoo {
+.comment-head {
     margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.icon , .comment-lite {
+    vertical-align: middle;
 }
 .tk-footer {
     display: none;
