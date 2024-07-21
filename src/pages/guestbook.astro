@@ -1,0 +1,16 @@
+---
+import LayoutDefault from '~/layouts/LayoutDefault.astro'
+import Comment from '~/components/Comment.astro';
+import '~/styles/guestbook.css'
+---
+
+<LayoutDefault  title='留言板 | ShinX'>
+    <div class="page-title">
+        <h2>&nbsp留言板&nbsp</h2>
+    </div>
+    <div id="message">
+        <p>留下想说的话——留言、赞赏、建议。</p>
+    </div>
+    <Comment />
+</LayoutDefault>
+
