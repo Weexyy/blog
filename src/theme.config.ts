@@ -1,10 +1,10 @@
 export const THEME_CONFIG: App.Locals['config'] = {
   /** blog title */
-  title: "小郑同学",
+  title: "ShinX",
   /** your name */
   author: "Weixin Zheng",
   /** website description */
-  desc: "Weixin的小窝以及杂七杂八的分享~",
+  desc: "ShinX的小窝以及杂七杂八的分享~",
   /** your deployed domain */
   website: "https://zhengweixin.top/",
   /** your locale */
