@@ -4,6 +4,7 @@ import LayoutDefault from '~/layouts/LayoutDefault.astro'
 import { getPosts } from '~/utils'
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro'
 import Pagination from '~/components/Pagination.astro'
+import Comment from '~/components/Comment.astro';
 
 export const getStaticPaths = (async ({}) => {
   const posts = await getPosts()
@@ -42,6 +43,7 @@ function getUrl(slug: string) {
     rightUrl={getUrl(next?.slug)}
     showPageCount={false}
   />
+    <Comment />
 </LayoutDefault>
 
 <script>

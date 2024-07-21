@@ -1,0 +1,17 @@
+<div id="twikoo"></div>
+<script is:inline src="https://cdn.staticfile.org/twikoo/1.6.38/twikoo.all.min.js"></script>
+<script is:inline>
+  twikoo.init({
+    envId: 'https://twikoo.api.zhengweixin.top/', // 将 '你的环境ID' 替换为你的 Twikoo 环境 ID
+    el: '#twikoo'
+  });
+</script>
+
+<style is:global>
+#twikoo {
+    margin-top: 50px;
+}
+.tk-footer {
+    display: none;
+}
+</style>
