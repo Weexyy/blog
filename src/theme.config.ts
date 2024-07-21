@@ -60,29 +60,5 @@ export const THEME_CONFIG: App.Locals['config'] = {
     { name: "经验", path: "experience" },
     { name: "点评", path: "review" },
   ],
-  /** your comment provider */
-  comments: {
-    // disqus: {
-       // please change this to your disqus shortname
-    //   shortname: "typography-astro",
-    // },
-    // giscus: {
-    //   repo: 'moeyua/astro-theme-typography',
-    //   repoId: 'R_kgDOKy9HOQ',
-    //   category: 'General',
-    //   categoryId: 'DIC_kwDOKy9HOc4CegmW',
-    //   mapping: 'title',
-    //   strict: '0',
-    //   reactionsEnabled: '1',
-    //   emitMetadata: '1',
-    //   inputPosition: 'top',
-    //   theme: 'light',
-    //   lang: 'zh-CN',
-    //   loading: 'lazy',
-    // },
-     twikoo: {
-       envId: "https://twikoo.api.zhengweixin.top/",
-     }
-  }
 }
 
