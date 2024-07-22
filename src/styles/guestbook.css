@@ -1,3 +1,7 @@
 #message {
     margin-top: -15px;
+    border-bottom-width: 2px; /* 设置下边框宽度 */
+    border-bottom-style: dashed; /* 设置下边框样式为虚线 */
+    border-bottom-color: #d2d2d2;
+    padding-bottom: 50px;
 }
