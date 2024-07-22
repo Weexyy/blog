@@ -1,7 +1,8 @@
 body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 7px 7px;
-
+}
+.main , footer {
   margin-left: 15%;
   margin-right: 15%;
 }
