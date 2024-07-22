@@ -23,7 +23,6 @@
     top: 0;
     width: 100%;
     z-index: 100;
-    margin-bottom: 50%;
   }
   #header-nav {
     display: flex;
@@ -42,29 +41,29 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('#header-nav a');
-
-    links.forEach(link => {
-      link.addEventListener('click', (event) => {
-        links.forEach(l => l.classList.remove('active'));
-
-        const target = event.target as HTMLElement;
-        if (target) {
-          target.classList.add('active');
+    const nav = document.getElementById('header-nav');
+    
+    if (nav) {
+      const links = nav.querySelectorAll('a');
+    
+      nav.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement | null;
+        
+        if (target && target.tagName === 'A') {
+          links.forEach(link => link.classList.remove('active'));
+          (target as HTMLAnchorElement).classList.add('active');
         }
       });
-    });
 
-    // Optional: Highlight the link based on the current URL
-    const currentPath = window.location.pathname;
+      // Optional: Highlight the link based on the current URL
+      const currentPath = window.location.pathname;
 
-    links.forEach(link => {
-      const href = link.getAttribute('href');
-      if (currentPath === href || (href === '/posts' && currentPath.startsWith('/posts/'))) {
-        link.classList.add('active');
-      }
-    });
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (currentPath === href || (href === '/posts' && currentPath.startsWith('/posts'))) {
+          link.classList.add('active');
+        }
+      });
+    }
   });
 </script>
-
-
