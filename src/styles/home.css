@@ -8,7 +8,8 @@ body {
     white-space: nowrap;
 }
 .container {
-    margin-bottom: 21%;
+    margin-bottom: 22%;
+    margin-top: 8%;
   }
 .profile-pic {
     pointer-events:none;
@@ -22,7 +23,6 @@ body {
     box-shadow: 0 0 20px #00000076;
 } 
 h2 {
-    margin-top: 10%;
     font-size: 3rem;
 }
 h3 {
