@@ -173,44 +173,51 @@
   color: #949291;
   margin-bottom: 10px;
 }
+
 .about-personality-content {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .about-personality-ESFJ {
   max-width: 50%;
 }
+
 .about-personality-ESFJ h2 {
   color: #33a474;
-  font-size: 2rem;
+  font-size: 2rem; /* Remove the duplicate font-size declaration */
   font-weight: bold;
-  font-size: 30px;
 }
+
 .about-personality-ESFJ h3 {
   font-weight: bold;
   font-size: 1.4rem;
   color: #4c4948;
 }
+
 .about-personality-img {
   max-width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .about-personality-more {
   font-size: 0.8rem;
   color: #949291;
 }
+
 .about-personality-img img {
-  transition: transform 0.5s ease; /* Smooth transition */
+  /* Ensure smooth transition and proper animation */
+  transition: transform 0.5s ease;
+  animation: rotate-back 0.5s ease forwards; /* Initial animation */
 }
+
 .about-personality:hover .about-personality-img img {
   animation: rotate-left 0.5s ease forwards; /* Rotate left on hover */
 }
-.about-personality .about-personality-img img {
-  animation: rotate-back 0.5s ease forwards; /* Rotate back to original on load */
-}
+
 @keyframes rotate-left {
   0% {
     transform: rotate(0deg);
@@ -219,6 +226,7 @@
     transform: rotate(-10deg);
   }
 }
+
 @keyframes rotate-back {
   0% {
     transform: rotate(-10deg);
@@ -227,6 +235,7 @@
     transform: rotate(0deg);
   }
 }
+
 .about-skills-title {
   font-size: 0.8rem;
   color: #949291;
