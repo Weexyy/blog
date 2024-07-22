@@ -23,6 +23,7 @@
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: background-color 0.3s, box-shadow 0.3s;
   }
   #header-nav {
     display: flex;
@@ -32,10 +33,13 @@
     text-decoration: none;
     padding: 10px;
   }
-
   #header-nav a.active {
     background-image: linear-gradient(to right, #99f6cf, #99f3fa);
     border-radius: 10px;
+  }
+  header.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
   }
 </style>
 
@@ -62,6 +66,19 @@
         const href = link.getAttribute('href');
         if (currentPath === href || (href === '/posts' && currentPath.startsWith('/posts'))) {
           link.classList.add('active');
+        }
+      });
+    }
+
+    const header = document.querySelector('header');
+    if (header) {
+      const scrollThreshold = 100; // Adjust this value as needed
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollThreshold) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
         }
       });
     }
