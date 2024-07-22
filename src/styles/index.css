@@ -22,15 +22,6 @@ a {
   background-image: linear-gradient(to right, #00ffaa, #00fbff);
   border-radius: 5px;
 }
-#top-line {
-  height: 5px; /* 横线的高度 */
-  background: linear-gradient(to right, #00ff0d, #00eeff);
-  position: fixed; /* 固定在顶部 */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* 确保它在最上层 */
-}
 .main {
   margin-bottom: 50px;
 }
