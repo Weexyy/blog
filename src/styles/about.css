@@ -238,3 +238,34 @@
   max-height: 60%;
   object-fit: contain;
 }
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes rotate-back {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.about-personality-img img {
+  animation: rotate-back 0.5s ease forwards; /* Initial state */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.about-personality-img:hover img {
+  animation: rotate-left 0.5s ease forwards; /* Play rotation animation on hover */
+}
+
+.about-personality-img img:not(:hover) {
+  animation: rotate-back 0.5s ease forwards; /* Play reverse animation when not hovering */
+}
