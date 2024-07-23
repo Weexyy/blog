@@ -15,24 +15,9 @@ declare namespace App {
       locale: keyof typeof import('./i18n.ts').LANGUAGES;
       /** theme style */
       themeStyle: 'light' | 'auto' | 'dark';
-      /** your socials */
-      socials: Array<{
-        name: string;
-        href: string;
-      }>,
       /** your header info */
       header: Object<{
         twitter: String;
-      }>,
-      /** your navigation links */
-      navs: Array<{
-        name: string;
-        href: string;
-      }>,
-      /** category mapping */
-      category_map: Array<{
-        name: string;
-        path: string;
       }>,
     }
     translate: (key: string, param?: string | number) => string;
