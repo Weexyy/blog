@@ -12,7 +12,7 @@ const year = new Date().getFullYear()
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('back-to-top');
 
-    if (button) { // 检查 button 是否为 null
+    if (button) {
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 20) {
                 button.style.display = 'block';
