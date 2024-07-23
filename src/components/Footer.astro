@@ -1,7 +1,7 @@
 ---
 const year = new Date().getFullYear()
 ---
-<button id="back-to-top" onclick="scrollToTop()">回到顶部</button>
+<span class="icon i-mdi-arrow-up-bold-box" id="back-to-top" aria-hidden="true"></span>
 <footer class="footer">
   <div id="copyright">
     <p>© 2023-{year} By <a href="https://zhengweixin.top/">ShinX</a></p>
@@ -9,24 +9,25 @@ const year = new Date().getFullYear()
 </footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('back-to-top');
+document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.getElementById('back-to-top');
 
-    if (button) {
-        window.addEventListener('scroll', () => {
+    if (backToTopButton) { // 检查 backToTopButton 是否为 null
+        window.addEventListener('scroll', function () {
+            // 只有在 backToTopButton 非 null 时才执行这些操作
             if (window.pageYOffset > 20) {
-                button.style.display = 'block';
+                backToTopButton.style.display = 'inline'; // 显示按钮
             } else {
-                button.style.display = 'none';
+                backToTopButton.style.display = 'none'; // 隐藏按钮
             }
         });
 
-        button.addEventListener('click', () => {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+        backToTopButton.addEventListener('click', function () {
+            // 同样，只有在 backToTopButton 非 null 时才执行滚动
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 });
-
 </script>
 
 <style>
@@ -34,18 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none; /* 初始隐藏按钮 */
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* 初始时隐藏 */
+    font-size: 36px; /* 增大图标尺寸 */
+    color: #007BFF; /* 图标颜色 */
+    transition: color 0.3s ease; /* 平滑颜色过渡 */
 }
 
 #back-to-top:hover {
-    background-color: #0056b3;
+    color: #0056b3; /* 鼠标悬停时的颜色变化 */
 }
 
 footer {
