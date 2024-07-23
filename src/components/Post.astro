@@ -1,16 +1,11 @@
 ---
-import { formatDate, getPathFromCategory } from '~/utils'
-import { THEME_CONFIG } from '~/theme.config'
+import { formatDate } from '~/utils'
 interface Props {
   post: Post
 }
 
 const { post } = Astro.props
 const { translate: t } = Astro.locals
-
-function getCategoryUrl(category: string) {
-  return `/categories/${getPathFromCategory(category, THEME_CONFIG.category_map)}`
-}
 ---
 
 <article class="post-card">
@@ -24,7 +19,7 @@ function getCategoryUrl(category: string) {
       {
         post.data.categories &&
           post.data.categories.map((category) => (
-            <a class="ml-2.5" href={getCategoryUrl(category)}>
+            <a class="ml-2.5">
               # {category}
             </a>
           ))
