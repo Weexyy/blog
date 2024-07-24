@@ -34,15 +34,6 @@ function getUrl(slug: string) {
   <Post post={entry}>
     <Content />
   </Post>
-  <Pagination
-    showLeft={Boolean(prev)}
-    leftTitle={`${t('prev_post')}: ${prev?.data.title}`}
-    leftUrl={getUrl(prev?.slug)}
-    showRight={Boolean(next)}
-    rightTitle={`${t('next_post')}: ${next?.data.title}`}
-    rightUrl={getUrl(next?.slug)}
-    showPageCount={false}
-  />
     <Comment />
 </LayoutDefault>
 
