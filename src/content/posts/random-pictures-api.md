@@ -11,27 +11,25 @@ https://img.api.zhengweixin.top/
 
 目前有一下分类：
 
-人物：[https://img.api.zhengweixin.top/figure](https://img.api.zhengweixin.top/figure)
+动漫：[https://img.api.zhengweixin.top/dongman](https://img.api.zhengweixin.top/dongman)
 
-风景：[https://img.api.zhengweixin.top/scenery](https://img.api.zhengweixin.top/scenery)
-
-（直接访问即所有图片）
+风景：[https://img.api.zhengweixin.top/fengjing](https://img.api.zhengweixin.top/fengjing)
 
 ------
 
 ## 预览
 
-![预览](https://img.api.zhengweixin.top)
+![预览](https://img.api.zhengweixin.top/dongman)
 
 ## 调用方法
 
 当成一张正常的图片用就行了。
 
 ```html
-<img src="https://img.api.zhengweixin.top">
+<img src="https://img.api.zhengweixin.top/dongman">
 ```
 
 ```markdown
-![img](https://img.api.zhengweixin.top)
+![img](https://img.api.zhengweixin.top/dongman)
 ```
 
